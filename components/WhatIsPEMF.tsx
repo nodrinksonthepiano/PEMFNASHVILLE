@@ -8,31 +8,9 @@ const pillars = [
           d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
       </svg>
     ),
-    title: 'Living room, barn, wherever',
+    title: 'Mobile, in-home',
     description:
-      'Whether it is your living room, bedroom, barn aisle, or paddock—Lisa brings the full setup to you so the session happens where you already are.',
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-          d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-      </svg>
-    ),
-    title: 'Say who you are booking for',
-    description:
-      'When you reach out, just say who the session is for—you, a family member, or an animal—so Lisa can plan accordingly.',
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-      </svg>
-    ),
-    title: 'Comfort-first session',
-    description:
-      'You stay fully clothed and relaxed—many clients read, rest, or simply breathe while the PEMF session runs.',
+      'Whether it is your living room, work location, or barn aisle—Lisa brings the full setup to you.',
   },
   {
     icon: (
@@ -42,7 +20,30 @@ const pillars = [
       </svg>
     ),
     title: 'Flexible scheduling',
-    description: 'Sessions are booked around your calendar—early mornings.',
+    description:
+      'Sessions are booked around your calendar—early mornings, evenings, or weekends when it works for you.',
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
+          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+      </svg>
+    ),
+    title: 'Comfort first',
+    description:
+      'Bring on the pillows, a cozy blanket, a scented candle, soft light—whatever helps you settle in. Many clients read, rest, or simply breathe while the PEMF session runs.',
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
+          d="M4.26 10.147a60.438 60.438 0 00-.491 6.347A48.62 48.62 0 0112 20.904a48.62 48.62 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.636 50.636 0 00-2.658-.813A59.906 59.906 0 0112 3.493a59.903 59.903 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0112 13.489a50.702 50.702 0 017.74-3.342" />
+      </svg>
+    ),
+    title: 'Nurse-led',
+    description:
+      'Lisa is a Registered Nurse—so every session is guided with professional training and a calm, attentive presence.',
   },
 ]
 
@@ -72,18 +73,22 @@ export default function WhatIsPEMF() {
             </p>
           </div>
 
-          {/* Pillars grid */}
-          <div className="grid grid-cols-2 gap-4">
+          {/* Pillars grid — square tiles on mobile (< sm), natural height from sm up */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             {pillars.map((p) => (
               <div
                 key={p.title}
-                className="bg-cream-dark rounded-2xl p-5 border border-mauve/10 hover:border-gold/30 transition-colors"
+                className="bg-cream-dark rounded-2xl p-3 sm:p-5 border border-mauve/10 hover:border-gold/30 transition-colors aspect-square sm:aspect-auto flex flex-col min-h-0"
               >
-                <div className="w-10 h-10 rounded-xl bg-plum/10 flex items-center justify-center text-plum mb-3">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-plum/10 flex shrink-0 items-center justify-center text-plum mb-2 sm:mb-3">
                   {p.icon}
                 </div>
-                <h3 className="font-serif text-plum font-bold text-base mb-1">{p.title}</h3>
-                <p className="text-plum/60 text-sm leading-relaxed">{p.description}</p>
+                <h3 className="font-serif text-plum font-bold text-sm sm:text-base mb-0.5 sm:mb-1 shrink-0">
+                  {p.title}
+                </h3>
+                <p className="text-plum/60 text-[11px] sm:text-sm leading-snug sm:leading-relaxed flex-1 min-h-0 overflow-y-auto sm:overflow-visible overscroll-contain">
+                  {p.description}
+                </p>
               </div>
             ))}
           </div>

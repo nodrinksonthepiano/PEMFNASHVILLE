@@ -6,7 +6,7 @@ export default function Pricing() {
       <div className="container-inner">
         {/* Header */}
         <div className="text-center mb-14">
-          <span className="section-label">Investment</span>
+          <span className="section-label">Pricing</span>
           <h2 className="section-title-dark mb-4">Easy Package Pricing</h2>
           <div className="divider-gold mx-auto" />
           <p className="text-cream/55 text-lg mt-4 max-w-lg mx-auto">

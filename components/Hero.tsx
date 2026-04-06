@@ -15,25 +15,26 @@ export default function Hero() {
             </span>
           </div>
 
-          <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-cream font-bold leading-[1.05] mb-4">
-            Wellness
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-cream font-bold leading-[1.1] mb-6 max-w-xl mx-auto md:mx-0 italic">
+            Support for discomfort,
             <br />
-            <span className="text-gold italic">That Comes</span>
-            <br />
-            to You.
+            stress, and tension
           </h1>
 
-          {/* Script line */}
-          <p className="font-script text-2xl sm:text-3xl text-mauve-light mb-6 tracking-wide">
-            Relief · Recovery · Relaxation
-          </p>
-
-          {/* Description */}
-          <p className="text-cream/75 text-lg leading-relaxed mb-8 max-w-md mx-auto md:mx-0">
-            Mobile PEMF wellness sessions for people &amp; animals in Nashville —
-            delivered to your home by{' '}
-            <strong className="text-cream font-semibold">Lisa Taylor, RN.</strong>
-          </p>
+          <ul className="text-cream/75 text-lg leading-relaxed mb-8 max-w-lg mx-auto md:mx-0 text-left space-y-2.5 list-none">
+            {[
+              'Muscle and joint comfort',
+              'Recovery after workouts or activity',
+              'Improved energy & overall wellness',
+            ].map((item) => (
+              <li key={item} className="flex gap-3 items-start">
+                <span className="text-gold mt-0.5 shrink-0" aria-hidden>
+                  ✓
+                </span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-10 w-full max-w-md mx-auto md:max-w-none md:mx-0 justify-center md:justify-start">

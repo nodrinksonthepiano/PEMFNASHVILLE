@@ -46,13 +46,9 @@ export default function AboutLisa() {
           {/* Text side */}
           <div className="mt-8 lg:mt-0">
             <span className="section-label">Meet Lisa</span>
-            <h2 className="section-title-light mb-4">
-              Care You Can Feel.<br />
-              <span className="text-mauve">A Story You Can Trust.</span>
-            </h2>
-            <div className="divider-gold" />
+            <div className="divider-gold mt-2" />
 
-            <div className="space-y-4 text-plum/70 text-lg leading-relaxed">
+            <div className="space-y-4 text-plum/70 text-lg leading-relaxed mt-6">
               <p>
                 Lisa Taylor is a <strong className="text-plum">Registered Nurse</strong>, lifelong equestrian,
                 and certified Pulse PEMF practitioner — and her journey to PEMF is deeply personal.
@@ -67,8 +63,7 @@ export default function AboutLisa() {
               </p>
               <p>
                 Today, Lisa brings her clinical background and genuine compassion to every session.
-                She comes to your home with professional equipment, a calming presence, and
-                the kind of attentive care you&rsquo;d expect from a nurse — because that&rsquo;s exactly what she is.
+                She comes to your home with professional equipment, a calming presence, and kind attentive care.
               </p>
               <p>
                 Her mobile sessions are designed to create a calm, supportive experience that helps
@@ -85,8 +80,8 @@ export default function AboutLisa() {
               >
                 Book a Free Consult
               </a>
-              <a href={siteConfig.phoneHref} className="btn-outline">
-                Call Lisa
+              <a href={siteConfig.emailHref} className="btn-outline">
+                {siteConfig.email}
               </a>
             </div>
           </div>

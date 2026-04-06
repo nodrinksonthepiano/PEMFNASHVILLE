@@ -21,9 +21,6 @@ export default function Testimonials() {
           <span className="section-label">Client Stories</span>
           <h2 className="section-title-dark mb-4">What Clients Are Saying</h2>
           <div className="divider-gold mx-auto" />
-          <p className="text-cream/55 text-lg mt-4 max-w-lg mx-auto">
-            Real experiences, in their own words.
-          </p>
         </div>
 
         {/* Testimonial grid */}

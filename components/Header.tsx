@@ -108,9 +108,10 @@ export default function Header() {
             href={siteConfig.calendly}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gold text-plum-dark font-bold text-sm px-4 py-2 rounded-full hover:bg-gold-light transition-all shadow-md"
+            className="shrink-0 bg-gold text-plum-dark font-bold rounded-full hover:bg-gold-light transition-all shadow-md text-xs px-3 py-1.5 sm:text-sm sm:px-4 sm:py-2"
           >
-            Book Free Consult
+            <span className="sm:hidden">Book</span>
+            <span className="hidden sm:inline">Book Free Consult</span>
           </a>
 
           {/* Mobile menu toggle */}

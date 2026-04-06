@@ -2,7 +2,7 @@ export const siteConfig = {
   name: 'PEMF Nashville',
   practitioner: 'Lisa Taylor',
   credentials: 'RN, Certified Pulse PEMF Practitioner',
-  tagline: 'Wellness That Comes to You',
+  tagline: 'Support for discomfort, stress, and tension',
   location: 'Nashville, TN',
   phone: '(615) 669-2391',
   phoneHref: 'tel:6156692391',

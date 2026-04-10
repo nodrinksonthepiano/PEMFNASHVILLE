@@ -73,8 +73,8 @@ export default function WhatIsPEMF() {
             </p>
           </div>
 
-          {/* Pillars grid — square tiles on mobile (< sm), natural height from sm up */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+          {/* Pillars grid — 2×2 blocks (square tiles < sm); avoid 4 skinny columns beside intro on lg+ */}
+          <div className="grid grid-cols-2 gap-3 sm:gap-4">
             {pillars.map((p) => (
               <div
                 key={p.title}

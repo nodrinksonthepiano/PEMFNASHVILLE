@@ -48,14 +48,14 @@ export default function FAQ() {
             <div className="divider-gold" />
             <p className="text-plum/60 text-lg leading-relaxed mt-4 mb-8">
               Have a question that&rsquo;s not here? Lisa is happy to answer it during your
-              free consult — no pressure, no commitment.
+              free consult.
             </p>
 
             <div className="bg-plum rounded-2xl p-6 text-cream">
               <div className="font-script text-2xl text-gold mb-2">Not sure if it&rsquo;s right for you?</div>
               <p className="text-cream/70 text-sm leading-relaxed mb-4">
-                The free consult is a no-pressure conversation. Lisa will answer your
-                questions and help you decide if a session makes sense.
+                On the free consult, Lisa will answer your questions and help you decide if a
+                session makes sense.
               </p>
               <a
                 href="https://calendly.com/pemfnashville/consult"

@@ -3,14 +3,14 @@ import { siteConfig } from '@/lib/content'
 
 const animalPhotos = [
   {
-    src: '/images/DOGSONPEMFCHAIR.jpg',
-    alt: 'Two dogs relaxing on the PEMF mat',
-    caption: 'Small companions',
-  },
-  {
     src: '/images/HORSEPEMFRELEASE.JPG',
     alt: 'Horse showing the classic PEMF release response',
     caption: 'Horses & performance animals',
+  },
+  {
+    src: '/images/pipring.jpeg',
+    alt: 'Small dog during an in-home PEMF wellness session',
+    caption: 'Small companions',
   },
   {
     src: '/images/HORSEHEADPEMF.jpg',

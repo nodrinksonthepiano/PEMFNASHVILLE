@@ -15,23 +15,24 @@ export default function AboutLisa() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image side */}
           <div className="flex justify-center lg:justify-start">
-            <div className="relative">
+            <div className="relative w-full max-w-xl lg:max-w-none">
               {/* Background glow */}
               <div className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-mauve/20 via-gold/10 to-transparent blur-lg" />
 
-              <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl w-72 h-96 sm:w-80 sm:h-[440px]">
+              <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/RNHORSE.JPG"
-                  alt="Lisa Taylor, RN with her horse"
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 640px) 288px, 320px"
+                  src="/images/theo12.jpg"
+                  alt="Lisa Taylor, Registered Nurse, with her dog Theo"
+                  width={2677}
+                  height={1784}
+                  className="h-auto w-full"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
 
               {/* Credentials strip */}
-              <div className="absolute -bottom-6 left-4 right-4 bg-plum rounded-2xl px-4 py-3 shadow-xl">
-                <div className="grid grid-cols-2 gap-2">
+              <div className="relative z-10 mt-4 bg-plum rounded-2xl px-4 py-3 shadow-xl">
+                <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
                   {credentials.map((c) => (
                     <div key={c.label} className="flex items-center gap-2">
                       <span className="text-base">{c.icon}</span>
@@ -50,24 +51,28 @@ export default function AboutLisa() {
 
             <div className="space-y-4 text-plum/70 text-lg leading-relaxed mt-6">
               <p>
-                Lisa Taylor is a <strong className="text-plum">Registered Nurse</strong>, lifelong equestrian,
-                and certified Pulse PEMF practitioner — and her journey to PEMF is deeply personal.
+                I&apos;ve always loved two things &mdash; caring for people and spending time around horses.
+                As a Registered Nurse and lifelong equestrian, I never imagined those worlds would collide in
+                the way that they did.
               </p>
               <p>
-                After being thrown from a horse and breaking a vertebra in her back, Lisa found herself
-                searching for support beyond what traditional medicine was offering. She discovered PEMF as
-                part of her own wellness journey — and the experience was profound.
+                A few years ago, I suffered a compression fracture in my back after falling off a horse. The
+                pain was intense, and I found myself searching for something beyond conventional treatments.
+                That&apos;s when I discovered Pulse PEMF.
               </p>
               <p>
-                &ldquo;I felt the difference in my own body. I knew I had to share this with others.&rdquo;
+                From my very first session, I felt a remarkable shift &mdash; real, immediate relief that
+                reached deep into the areas of pain I hadn&apos;t been able to touch before. As I continued with
+                PEMF, that relief grew into lasting comfort and renewed strength.
               </p>
               <p>
-                Today, Lisa brings her clinical background and genuine compassion to every session.
-                She comes to your home with professional equipment, a calming presence, and kind attentive care.
+                Today, I bring what I&apos;ve learned &mdash; both as a nurse and through my own recovery &mdash;
+                to every PEMF session. My goal is simple: help you feel better, move easier, and find real relief
+                in a peaceful, relaxed setting.
               </p>
               <p>
-                Her mobile sessions are designed to create a calm, supportive experience that helps
-                clients feel more comfortable, restored, and cared for.
+                If you&apos;re ready to experience the difference PEMF can make, I&apos;d love to share it with
+                you and help you start your own path toward wellness.
               </p>
             </div>
 

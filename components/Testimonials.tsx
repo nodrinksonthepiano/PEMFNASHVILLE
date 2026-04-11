@@ -12,7 +12,33 @@ function StarRow() {
   )
 }
 
+function TestimonialCard({ t }: { t: (typeof testimonials)[number] }) {
+  return (
+    <div
+      className="bg-cream/[0.06] border border-gold/15 rounded-2xl p-6
+                 hover:bg-cream/[0.10] hover:border-gold/30 transition-all duration-300"
+    >
+      <StarRow />
+      <blockquote className="text-cream/80 leading-relaxed text-sm mb-5 italic">
+        &ldquo;{t.quote}&rdquo;
+      </blockquote>
+      <div className="flex items-center gap-3">
+        <div
+          className="w-8 h-8 rounded-full bg-gold/20 border border-gold/30
+                     flex items-center justify-center text-gold font-bold text-sm"
+        >
+          {t.name[0]}
+        </div>
+        <div className="text-cream font-semibold text-sm">— {t.name}</div>
+      </div>
+    </div>
+  )
+}
+
 export default function Testimonials() {
+  const firstRow = testimonials.slice(0, 4)
+  const lastRow = testimonials.slice(4)
+
   return (
     <section id="testimonials" className="section-dark">
       <div className="container-inner">
@@ -23,37 +49,25 @@ export default function Testimonials() {
           <div className="divider-gold mx-auto" />
         </div>
 
-        {/* Testimonial grid */}
+        {/* Grid: four standard cards, Beth featured script, Joely */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {testimonials.map((t) => (
-            <div
-              key={t.id}
-              className="bg-cream/[0.06] border border-gold/15 rounded-2xl p-6
-                         hover:bg-cream/[0.10] hover:border-gold/30 transition-all duration-300"
-            >
-              <StarRow />
-              <blockquote className="text-cream/80 leading-relaxed text-sm mb-5 italic">
-                &ldquo;{t.quote}&rdquo;
-              </blockquote>
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-gold/20 border border-gold/30
-                                flex items-center justify-center text-gold font-bold text-sm">
-                  {t.name[0]}
-                </div>
-                <div className="text-cream font-semibold text-sm">— {t.name}</div>
-              </div>
-            </div>
+          {firstRow.map((t) => (
+            <TestimonialCard key={t.id} t={t} />
           ))}
-        </div>
-
-        {/* Bottom quote — Beth's stands out */}
-        <div className="mt-10 text-center">
-          <div className="inline-block bg-gold/10 border border-gold/25 rounded-2xl px-8 py-6 max-w-lg">
-            <p className="font-script text-3xl text-gold leading-snug">
-              &ldquo;My body exhaled and relaxed<br />for the first time in months.&rdquo;
+          <div
+            className="bg-cream/[0.06] border border-gold/15 rounded-2xl p-6
+                       hover:bg-cream/[0.10] hover:border-gold/30 transition-all duration-300
+                       flex flex-col justify-center text-center"
+          >
+            <p className="font-script text-2xl sm:text-3xl text-gold leading-snug px-1">
+              &ldquo;My body exhaled and relaxed<br />
+              for the first time in months.&rdquo;
             </p>
-            <p className="text-cream/50 text-sm mt-3">— Beth</p>
+            <p className="text-cream/50 text-sm mt-4">— Beth</p>
           </div>
+          {lastRow.map((t) => (
+            <TestimonialCard key={t.id} t={t} />
+          ))}
         </div>
       </div>
     </section>

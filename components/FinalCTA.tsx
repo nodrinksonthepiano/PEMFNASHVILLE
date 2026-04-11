@@ -39,7 +39,7 @@ export default function FinalCTA() {
         </h2>
         <p className="text-cream/60 text-lg max-w-lg mx-auto mb-10 leading-relaxed">
           Start with a free consult. Lisa will answer every question, walk you through what
-          to expect, and help you find the right fit — no pressure.
+          to expect, and help you find the right fit.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

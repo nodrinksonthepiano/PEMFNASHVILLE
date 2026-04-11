@@ -41,8 +41,9 @@ export const testimonials = [
   },
   {
     id: 5,
-    name: 'Beth',
-    quote: 'I feel like my body exhaled and relaxed for the first time in months!',
+    name: 'Joely',
+    quote:
+      'As soon as I got up I could immediately feel the difference like my lower back finally released years of tension.',
   },
 ]
 
@@ -52,7 +53,7 @@ export const services = [
     title: 'Relief',
     description:
       'Targeted support for muscle and joint comfort. Clients report feeling more at ease in their bodies — less tension, more freedom of movement.',
-    image: '/images/roxchair.jpg',
+    image: '/images/roxchair.jpeg',
     imageAlt: 'Client seated for an in-home PEMF session',
   },
   {

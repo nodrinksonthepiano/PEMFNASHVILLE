@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-plum">
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 grid md:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
         {/* Text content — centered on mobile, left-aligned md+ */}
-        <div className="order-2 md:order-1 flex flex-col items-center md:items-start text-center md:text-left">
+        <div className="order-2 md:order-1 flex min-w-0 w-full flex-col items-center md:items-start text-center md:text-left">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-gold/15 border border-gold/30 rounded-full px-4 py-1.5 mb-7">
             <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
@@ -15,16 +15,29 @@ export default function Hero() {
             </span>
           </div>
 
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-cream font-bold leading-[1.1] mb-6 max-w-xl mx-auto md:mx-0 italic">
-            Support for discomfort,
-            <br />
-            stress, and tension
+          <h1 className="font-serif text-cream font-bold leading-none mb-6 mx-auto max-w-full md:mx-0 inline-flex flex-nowrap items-center justify-center md:justify-start gap-x-0 whitespace-nowrap text-[clamp(1.5rem,0.55rem+3.6vw,3.75rem)]">
+            <span className="italic">Relief</span>
+            <span
+              aria-hidden
+              className="text-gold not-italic font-normal leading-none flex shrink-0 items-center justify-center px-[0.42em] text-[0.78em] sm:text-[0.74em] lg:text-[0.7em]"
+            >
+              ·
+            </span>
+            <span className="italic">Recover</span>
+            <span
+              aria-hidden
+              className="text-gold not-italic font-normal leading-none flex shrink-0 items-center justify-center px-[0.42em] text-[0.78em] sm:text-[0.74em] lg:text-[0.7em]"
+            >
+              ·
+            </span>
+            <span className="italic">Recharge</span>
           </h1>
 
           <ul className="text-cream/75 text-lg leading-relaxed mb-8 max-w-lg mx-auto md:mx-0 text-left space-y-2.5 list-none">
             {[
+              'Stress and tension relief',
               'Muscle and joint comfort',
-              'Recovery after workouts or activity',
+              'Rebound after workouts or activity',
               'Improved energy & overall wellness',
             ].map((item) => (
               <li key={item} className="flex gap-3 items-start">

@@ -2,7 +2,7 @@ export const siteConfig = {
   name: 'PEMF Nashville',
   practitioner: 'Lisa Taylor',
   credentials: 'RN, Certified Pulse PEMF Practitioner',
-  tagline: 'Support for discomfort, stress, and tension',
+  tagline: 'Relief · Recover · Recharge',
   location: 'Nashville, TN',
   phone: '(615) 669-2391',
   phoneHref: 'tel:6156692391',
@@ -52,22 +52,22 @@ export const services = [
     title: 'Relief',
     description:
       'Targeted support for muscle and joint comfort. Clients report feeling more at ease in their bodies — less tension, more freedom of movement.',
-    image: '/images/CLIENT2.JPG',
-    imageAlt: 'PEMF session for muscle and joint comfort',
+    image: '/images/roxchair.jpg',
+    imageAlt: 'Client seated for an in-home PEMF session',
   },
   {
     id: 'recovery',
     title: 'Recovery',
     description:
       'A restorative experience after workouts, physical activity, or daily strain. Support your body\'s natural recovery process and recharge for what\'s next.',
-    image: '/images/PEMFCHAIR.jpg',
-    imageAlt: 'PEMF recovery session setup',
+    image: '/images/CLIENT2.JPG',
+    imageAlt: 'PEMF session for muscle and joint comfort',
   },
   {
-    id: 'relaxation',
-    title: 'Relaxation',
+    id: 'recharge',
+    title: 'Recharge',
     description:
-      'Promote deep relaxation, stress relief, and a restored sense of balance. Clients often describe sessions as profoundly calming — a reset for both body and mind.',
+      'Support recharge, stress relief, and a restored sense of balance. Clients often describe sessions as profoundly calming — a reset for both body and mind.',
     image: '/images/CLIENT1.JPG',
     imageAlt: 'Client relaxing during in-home PEMF session',
   },

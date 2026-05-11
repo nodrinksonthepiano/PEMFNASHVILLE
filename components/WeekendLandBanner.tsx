@@ -47,19 +47,22 @@ export default function WeekendLandBanner() {
         className="pointer-events-auto relative w-full max-w-3xl rounded-2xl border border-gold/50 shadow-[0_-12px_32px_rgba(26,11,17,0.35)]
                    overflow-hidden"
       >
+        <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
+          <div
+            className="absolute inset-0 origin-center bg-[url('/images/treebackgroundpopup.png')] bg-cover bg-center bg-no-repeat
+                       scale-[1.28] max-md:bg-[center_62%] md:scale-100 md:bg-center"
+          />
+        </div>
         <div
           aria-hidden
-          className="absolute inset-0 bg-[url('/images/treebackgroundpopup.png')] bg-cover bg-center pointer-events-none"
-        />
-        <div
-          aria-hidden
-          className="absolute inset-0 bg-gradient-to-t from-plum/[0.17] via-cream/[0.06] to-cream/[0.42]
+          className="absolute inset-0 bg-gradient-to-t from-plum/[0.06] via-cream/[0.02] to-cream/[0.20]
+                     md:from-plum/[0.17] md:via-cream/[0.06] md:to-cream/[0.42]
                      pointer-events-none"
         />
         <div className="relative z-10 p-3 sm:p-3.5">
           <div
-            className="rounded-xl border border-plum/20 bg-cream/[0.72] px-5 py-4 sm:px-6 sm:py-4 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5
-                       shadow-[0_8px_32px_rgba(61,26,40,0.12)] backdrop-blur-md backdrop-saturate-110"
+            className="rounded-xl border border-plum/20 bg-cream/[0.74] px-5 py-4 sm:px-6 sm:py-4 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5
+                       shadow-[0_8px_32px_rgba(61,26,40,0.12)] backdrop-blur-sm backdrop-saturate-110 md:backdrop-blur-md md:bg-cream/[0.72]"
           >
             <div className="flex-1 min-w-0 text-center sm:text-left">
               <p className="font-serif text-lg sm:text-xl font-bold text-plum tracking-tight leading-snug">

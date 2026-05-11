@@ -55,14 +55,14 @@ export default function WeekendLandBanner() {
         </div>
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-t from-plum/[0.06] via-cream/[0.02] to-cream/[0.20]
-                     md:from-plum/[0.17] md:via-cream/[0.06] md:to-cream/[0.42]
+          className="absolute inset-0 bg-gradient-to-t from-plum/[0.03] via-transparent to-cream/[0.14]
+                     md:from-plum/[0.11] md:via-cream/[0.025] md:to-cream/[0.30]
                      pointer-events-none"
         />
         <div className="relative z-10 p-3 sm:p-3.5">
           <div
-            className="rounded-xl border border-plum/20 bg-cream/[0.74] px-5 py-4 sm:px-6 sm:py-4 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5
-                       shadow-[0_8px_32px_rgba(61,26,40,0.12)] backdrop-blur-sm backdrop-saturate-110 md:backdrop-blur-md md:bg-cream/[0.72]"
+            className="rounded-xl border border-plum/20 bg-cream/[0.64] px-5 py-4 sm:px-6 sm:py-4 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5
+                       shadow-[0_8px_32px_rgba(61,26,40,0.12)] backdrop-blur-sm backdrop-saturate-110 md:backdrop-blur-md md:bg-cream/[0.60]"
           >
             <div className="flex-1 min-w-0 text-center sm:text-left">
               <p className="font-serif text-lg sm:text-xl font-bold text-plum tracking-tight leading-snug">

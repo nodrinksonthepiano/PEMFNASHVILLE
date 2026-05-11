@@ -1,4 +1,14 @@
-import { pricing, siteConfig } from '@/lib/content'
+import { pricing, siteConfig, schedulingLinks } from '@/lib/content'
+
+function schedulingLinkClasses(highlight: boolean) {
+  return highlight
+    ? 'font-semibold text-plum underline decoration-plum/35 underline-offset-2 hover:text-plum-dark'
+    : 'font-semibold text-gold underline decoration-gold/40 underline-offset-2 hover:text-gold-light'
+}
+
+function schedulingOrDividerClass(highlight: boolean) {
+  return highlight ? 'text-plum/45' : 'text-cream/45'
+}
 
 export default function Pricing() {
   return (
@@ -54,25 +64,28 @@ export default function Pricing() {
               )}
 
               <p
-                className={`text-sm leading-relaxed mt-5 flex-1 mb-6 ${
+                className={`text-sm leading-relaxed mt-5 flex-1 mb-4 ${
                   plan.highlight ? 'text-plum/70' : 'text-cream/60'
                 }`}
               >
                 {plan.description}
               </p>
 
-              <a
-                href={siteConfig.calendly}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`block text-center font-bold py-3 rounded-full transition-all ${
-                  plan.highlight
-                    ? 'bg-plum text-gold hover:bg-plum-dark'
-                    : 'bg-gold/15 border border-gold/30 text-gold hover:bg-gold/25'
-                }`}
-              >
-                Book Now
-              </a>
+              <p className={`text-center text-sm shrink-0 pb-1 ${plan.highlight ? 'text-plum/85' : 'text-cream/75'}`}>
+                <a
+                  href={siteConfig.calendly}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={schedulingLinkClasses(plan.highlight)}
+                >
+                  {schedulingLinks.bookConsult}
+                </a>
+                <span className={schedulingOrDividerClass(plan.highlight)}>{' '}or{' '}</span>
+                <a href={siteConfig.smsHref} className={schedulingLinkClasses(plan.highlight)}>
+                  {schedulingLinks.textToSchedule}
+                </a>
+                .
+              </p>
             </div>
           ))}
         </div>

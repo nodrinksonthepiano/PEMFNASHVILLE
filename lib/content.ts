@@ -15,6 +15,21 @@ export const siteConfig = {
   facebook: 'https://www.facebook.com/pemfnashville',
 }
 
+/** Short labels for Calendly + SMS scheduling CTAs */
+export const schedulingLinks = {
+  bookConsult: 'Book a consult',
+  textToSchedule: 'text to schedule',
+} as const
+
+/** Fixed footer promo — bump storageVersion after copy or offer changes */
+export const weekendLandPromo = {
+  storageVersion: 3,
+  headline: 'Weekend mini-session pop-up',
+  locationLine: 'The Land · Kingston Springs',
+  hoursLine: 'Saturdays and Sundays from 11am–2pm',
+  priceLine: '$30 · 20 minutes',
+} as const
+
 export const testimonials = [
   {
     id: 1,
@@ -125,7 +140,19 @@ export const faqs = [
   },
 ]
 
-export const pricing = [
+export type PricingTier = {
+  id: string
+  label: string
+  price: string
+  sessions: string
+  perSession: string
+  highlight: boolean
+  description: string
+  badge?: string
+  savings?: string
+}
+
+export const pricing: PricingTier[] = [
   {
     id: 'single',
     label: 'Single Session',

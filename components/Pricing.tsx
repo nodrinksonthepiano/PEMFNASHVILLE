@@ -11,16 +11,16 @@ export default function Pricing() {
           <div className="divider-gold mx-auto" />
           <p className="text-cream/55 text-lg mt-4 max-w-lg mx-auto">
             All sessions are conducted in your home. No hidden fees.
-            Multi-session packages offer the best value and cumulative support.
+            Packages and memberships offer recurring value and cumulative support.
           </p>
         </div>
 
         {/* Pricing cards */}
-        <div className="grid md:grid-cols-3 gap-5 lg:gap-6 mb-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6 mb-10">
           {pricing.map((plan) => (
             <div
               key={plan.id}
-              className={`relative rounded-3xl p-7 border transition-all duration-200 ${
+              className={`relative flex flex-col h-full rounded-3xl p-7 border transition-all duration-200 ${
                 plan.highlight
                   ? 'bg-gold border-gold shadow-xl shadow-gold/20 scale-[1.02]'
                   : 'bg-plum-light/50 border-gold/20 hover:border-gold/40'
@@ -53,9 +53,11 @@ export default function Pricing() {
                 </div>
               )}
 
-              {!plan.savings && <div className="mb-5" />}
-
-              <p className={`text-sm leading-relaxed mb-6 ${plan.highlight ? 'text-plum/70' : 'text-cream/60'}`}>
+              <p
+                className={`text-sm leading-relaxed mt-5 flex-1 mb-6 ${
+                  plan.highlight ? 'text-plum/70' : 'text-cream/60'
+                }`}
+              >
                 {plan.description}
               </p>
 
@@ -73,28 +75,6 @@ export default function Pricing() {
               </a>
             </div>
           ))}
-        </div>
-
-        {/* Monthly retainer teaser */}
-        <div className="rounded-2xl border border-mauve/30 bg-mauve/10 px-6 py-5 flex flex-col sm:flex-row
-                        items-start sm:items-center gap-4 sm:gap-8">
-          <div className="text-3xl">🌙</div>
-          <div className="flex-1">
-            <div className="text-cream font-semibold">Wellness Monthly — Coming Soon</div>
-            <div className="text-cream/50 text-sm mt-1">
-              One session per week. Consistent support for your body on a regular schedule.
-              Ask Lisa about the monthly wellness program during your consult.
-            </div>
-          </div>
-          <a
-            href={siteConfig.calendly}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="shrink-0 border border-mauve/50 text-mauve-light text-sm font-semibold px-5 py-2
-                       rounded-full hover:bg-mauve/20 transition-colors"
-          >
-            Ask About It
-          </a>
         </div>
 
         {/* Payment info */}

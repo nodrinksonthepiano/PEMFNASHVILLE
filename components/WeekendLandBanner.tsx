@@ -3,34 +3,15 @@
 import { useCallback, useEffect, useState } from 'react'
 import { weekendLandPromo, siteConfig, schedulingLinks } from '@/lib/content'
 
-const TTL_MS = 7 * 24 * 60 * 60 * 1000
-
-function storageKey() {
-  return `pemfnashville.weekendLandPromo.v${weekendLandPromo.storageVersion}.dismissedAt`
-}
-
 export default function WeekendLandBanner() {
   const [mounted, setMounted] = useState(false)
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(true)
 
   useEffect(() => {
-    const key = storageKey()
-    const raw = localStorage.getItem(key)
-    let show = true
-    if (raw) {
-      const t = Number(raw)
-      if (Number.isFinite(t) && Date.now() - t < TTL_MS) {
-        show = false
-      } else {
-        localStorage.removeItem(key)
-      }
-    }
-    setOpen(show)
     setMounted(true)
   }, [])
 
   const dismiss = useCallback(() => {
-    localStorage.setItem(storageKey(), String(Date.now()))
     setOpen(false)
   }, [])
 
@@ -63,50 +44,64 @@ export default function WeekendLandBanner() {
                  pointer-events-none land-banner-enter"
     >
       <div
-        className="pointer-events-auto w-full max-w-3xl rounded-2xl border border-gold/50 bg-plum shadow-[0_-12px_32px_rgba(26,11,17,0.35)]
-                   text-cream overflow-hidden"
+        className="pointer-events-auto relative w-full max-w-3xl rounded-2xl border border-gold/50 shadow-[0_-12px_32px_rgba(26,11,17,0.35)]
+                   overflow-hidden"
       >
-        <div className="px-5 py-4 sm:px-6 sm:py-4 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5">
-          <div className="flex-1 min-w-0 text-center sm:text-left">
-            <p className="font-serif text-lg sm:text-xl font-bold text-gold tracking-tight leading-snug">
-              {weekendLandPromo.headline}
-            </p>
-            <p className="text-cream/90 text-sm mt-1.5 font-medium leading-snug">
-              <span className="block sm:inline">{weekendLandPromo.locationLine}</span>
-              <span className="hidden sm:inline"> · </span>
-              <span className="block sm:inline text-gold/95">{weekendLandPromo.hoursLine}</span>
-              <span className="hidden sm:inline"> · </span>
-              <span className="block sm:inline">{weekendLandPromo.priceLine}</span>
-            </p>
-            <p className="text-cream/75 text-xs sm:text-sm mt-2">
-              <a
-                href={siteConfig.calendly}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-gold underline decoration-gold/50 underline-offset-2 hover:text-gold-light"
-              >
-                {schedulingLinks.bookConsult}
-              </a>
-              <span className="text-cream/50">{' or '}</span>
-              <a
-                href={siteConfig.smsHref}
-                className="font-semibold text-gold underline decoration-gold/50 underline-offset-2 hover:text-gold-light"
-              >
-                {schedulingLinks.textToSchedule}
-              </a>
-              .
-            </p>
-          </div>
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-[url('/images/treebackgroundpopup.png')] bg-cover bg-center pointer-events-none"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-gradient-to-t from-plum/[0.17] via-cream/[0.06] to-cream/[0.42]
+                     pointer-events-none"
+        />
+        <div className="relative z-10 p-3 sm:p-3.5">
+          <div
+            className="rounded-xl border border-plum/20 bg-cream/[0.72] px-5 py-4 sm:px-6 sm:py-4 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5
+                       shadow-[0_8px_32px_rgba(61,26,40,0.12)] backdrop-blur-md backdrop-saturate-110"
+          >
+            <div className="flex-1 min-w-0 text-center sm:text-left">
+              <p className="font-serif text-lg sm:text-xl font-bold text-plum tracking-tight leading-snug">
+                {weekendLandPromo.headline}
+              </p>
+              <p className="text-plum/85 text-sm mt-1.5 font-medium leading-snug">
+                <span className="block sm:inline">{weekendLandPromo.locationLine}</span>
+                <span className="hidden sm:inline text-plum/40"> · </span>
+                <span className="block sm:inline font-semibold text-gold-dark">{weekendLandPromo.hoursLine}</span>
+                <span className="hidden sm:inline text-plum/40"> · </span>
+                <span className="block sm:inline text-plum/90">{weekendLandPromo.priceLine}</span>
+              </p>
+              <p className="text-plum/70 text-xs sm:text-sm mt-2">
+                <a
+                  href={siteConfig.calendly}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-plum underline decoration-plum/40 underline-offset-[3px] hover:text-plum-dark"
+                >
+                  {schedulingLinks.bookConsult}
+                </a>
+                <span className="text-plum/45">{' or '}</span>
+                <a
+                  href={siteConfig.smsHref}
+                  className="font-semibold text-plum underline decoration-plum/40 underline-offset-[3px] hover:text-plum-dark"
+                >
+                  {schedulingLinks.textToSchedule}
+                </a>
+                .
+              </p>
+            </div>
 
-          <div className="flex justify-center sm:justify-end shrink-0">
-            <button
-              type="button"
-              onClick={dismiss}
-              className="rounded-full border border-cream/25 text-cream/85 text-sm font-semibold px-5 py-2.5
-                         hover:bg-cream/10 hover:border-cream/35 transition-colors"
-            >
-              Got it
-            </button>
+            <div className="flex justify-center sm:justify-end shrink-0">
+              <button
+                type="button"
+                onClick={dismiss}
+                className="rounded-full border border-plum/35 text-plum text-sm font-semibold px-5 py-2.5
+                           bg-cream/80 hover:bg-plum/[0.06] hover:border-plum/50 transition-colors"
+              >
+                Got it
+              </button>
+            </div>
           </div>
         </div>
       </div>

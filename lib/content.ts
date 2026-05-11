@@ -21,9 +21,8 @@ export const schedulingLinks = {
   textToSchedule: 'text to schedule',
 } as const
 
-/** Fixed footer promo — bump storageVersion after copy or offer changes */
+/** Copy for fixed footer promo (The Land weekends) */
 export const weekendLandPromo = {
-  storageVersion: 3,
   headline: 'Weekend mini-session pop-up',
   locationLine: 'The Land · Kingston Springs',
   hoursLine: 'Saturdays and Sundays from 11am–2pm',

@@ -42,14 +42,12 @@ export default function Testimonials() {
   return (
     <section id="testimonials" className="section-dark">
       <div className="container-inner">
-        {/* Header */}
         <div className="text-center mb-14">
           <span className="section-label">Client Stories</span>
           <h2 className="section-title-dark mb-4">What Clients Are Saying</h2>
           <div className="divider-gold mx-auto" />
         </div>
 
-        {/* Grid: four standard cards, Beth featured script, Joely */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {firstRow.map((t) => (
             <TestimonialCard key={t.id} t={t} />

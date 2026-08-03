@@ -44,7 +44,8 @@ export default function Services() {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="font-serif text-cream text-2xl font-bold mb-3">{service.title}</h3>
+                <h3 className="font-serif text-cream text-2xl font-bold mb-1">{service.title}</h3>
+                <p className="text-gold/80 text-sm font-medium mb-3">{service.subhead}</p>
                 <p className="text-cream/65 leading-relaxed text-sm">{service.description}</p>
               </div>
             </div>

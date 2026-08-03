@@ -26,7 +26,7 @@ export const sessionLocations = [
   {
     id: 'office',
     title: 'Kinnection Clinic · Brentwood',
-    headline: 'A private treatment room in Brentwood',
+    headline: 'A private session room in Brentwood',
     price: '$100',
     duration: '60 minutes',
     description:
@@ -55,58 +55,88 @@ export const testimonials = [
   {
     id: 1,
     name: 'Roxanne',
+    category: 'joint',
     quote:
       'I have arthritis in my neck and during sleep my neck would have severe pain. I\'ve been having PEMF sessions for about six weeks now and I no longer have that pain in my neck! It really improved my sleep quality!',
   },
   {
     id: 2,
     name: 'Emma',
+    category: 'back',
     quote:
       'I injured my back several months ago, I tried several things including physical therapy but nothing really helped. One session with Lisa and I felt the best I\'ve felt in a long time.',
   },
   {
     id: 3,
     name: 'Jeff',
+    category: 'back',
     quote:
       'I was experiencing a lot of pain and tightness in my lower back and SI joint. After my session I had a noticeable reduction in tightness in my lower back, as well as increased mobility. My SI pain was 90% reduced. This is my first time with PEMF and I\'m pretty amazed!',
   },
   {
     id: 4,
     name: 'Ashley',
+    category: 'energy',
     quote: 'I feel amazing!! My hips have almost zero pain and I have so much energy. The machine is magic!',
   },
   {
     id: 5,
     name: 'Joely',
+    category: 'back',
     quote:
       'As soon as I got up I could immediately feel the difference like my lower back finally released years of tension.',
   },
 ]
 
+export const testimonialGroups = [
+  {
+    id: 'joint',
+    heading: 'Joint & Arthritis Support',
+    testimonialIds: [1],
+  },
+  {
+    id: 'back',
+    heading: 'Back & Recovery',
+    testimonialIds: [2, 3, 5],
+  },
+  {
+    id: 'energy',
+    heading: 'Energy & Sleep',
+    testimonialIds: [4],
+    featured: {
+      name: 'Beth',
+      quote: 'My body exhaled and relaxed for the first time in months.',
+    },
+  },
+] as const
+
 export const services = [
   {
     id: 'relief',
     title: 'Relief',
+    subhead: 'Muscle and joint discomfort support',
     description:
       'Targeted support for muscle and joint comfort. Clients report feeling more at ease in their bodies — less tension, more freedom of movement.',
     image: '/images/roxchair.jpeg',
-    imageAlt: 'Client seated for an in-home PEMF session',
+    imageAlt: 'PEMF session for muscle and joint discomfort support in Nashville',
   },
   {
     id: 'recovery',
     title: 'Recovery',
+    subhead: 'Workout and athletic recovery',
     description:
       'A restorative experience after workouts, physical activity, or daily strain. Support your body\'s natural recovery process and recharge for what\'s next.',
     image: '/images/CLIENT2.JPG',
-    imageAlt: 'PEMF session for muscle and joint comfort',
+    imageAlt: 'PEMF workout and athletic recovery session in Brentwood',
   },
   {
     id: 'recharge',
     title: 'Recharge',
+    subhead: 'Stress, energy, and whole-body reset',
     description:
       'Support recharge, stress relief, and a restored sense of balance. Clients often describe sessions as profoundly calming — a reset for both body and mind.',
     image: '/images/CLIENT1.JPG',
-    imageAlt: 'Client relaxing during in-home PEMF session',
+    imageAlt: 'PEMF stress relief and whole-body reset session in Nashville',
   },
 ]
 
@@ -170,6 +200,36 @@ export const faqs = [
     question: 'What\'s the difference between an office session and an in-home session?',
     answer:
       'Both are full 60-minute sessions with the same equipment and the same care. In-home sessions are $150 and include Lisa traveling to you with everything needed, so you never have to leave home. Office sessions are $100 at Kinnection Clinic in Brentwood.',
+  },
+  {
+    id: 11,
+    question: 'What do people use PEMF for?',
+    answer:
+      'People come to PEMF for many different reasons. Common ones include general discomfort, muscle and joint stiffness, workout and athletic recovery, and simply wanting to feel more at ease in their body. Everyone\'s experience is different — Lisa will talk through your goals on the free consult.',
+  },
+  {
+    id: 12,
+    question: 'Can PEMF help with arthritis or joint stiffness?',
+    answer:
+      'Many people living with joint stiffness or arthritis seek out PEMF as part of their wellness routine. PEMF is a wellness service, not a medical treatment, and it isn\'t intended to diagnose or treat any condition. Lisa is happy to discuss whether a session makes sense for you.',
+  },
+  {
+    id: 13,
+    question: 'Is PEMF used for workout recovery?',
+    answer:
+      'Many athletes and active people use PEMF as part of a recovery routine after training, competition, or physical strain. Many clients book sessions specifically around their training schedule.',
+  },
+  {
+    id: 14,
+    question: 'What is PEMF used for after an injury?',
+    answer:
+      'People often seek PEMF while recovering from physical strain or while working with their doctor or physical therapist. PEMF is a complement to medical care, never a replacement.',
+  },
+  {
+    id: 15,
+    question: 'Does PEMF help with inflammation?',
+    answer:
+      'Inflammation is one of the most common reasons people research PEMF. Research in this area is ongoing. PEMF Nashville offers wellness sessions and does not make medical claims — Lisa will answer your questions honestly on a free consult.',
   },
 ]
 

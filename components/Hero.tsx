@@ -7,47 +7,21 @@ export default function Hero() {
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 grid md:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
         {/* Text content — centered on mobile, left-aligned md+ */}
         <div className="order-2 md:order-1 flex min-w-0 w-full flex-col items-center md:items-start text-center md:text-left">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-gold/15 border border-gold/30 rounded-full px-4 py-1.5 mb-7">
-            <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-            <span className="text-gold text-sm font-medium tracking-wide">
-              Nashville, TN · In-Home Sessions
-            </span>
-          </div>
-
-          <h1 className="font-serif text-cream font-bold leading-none mb-6 mx-auto max-w-full md:mx-0 inline-flex flex-nowrap items-center justify-center md:justify-start gap-x-0 whitespace-nowrap text-[clamp(1.5rem,0.55rem+3.6vw,3.75rem)]">
-            <span className="italic">Relief</span>
-            <span
-              aria-hidden
-              className="text-gold not-italic font-normal leading-none flex shrink-0 items-center justify-center px-[0.42em] text-[0.78em] sm:text-[0.74em] lg:text-[0.7em]"
-            >
-              ·
-            </span>
-            <span className="italic">Recover</span>
-            <span
-              aria-hidden
-              className="text-gold not-italic font-normal leading-none flex shrink-0 items-center justify-center px-[0.42em] text-[0.78em] sm:text-[0.74em] lg:text-[0.7em]"
-            >
-              ·
-            </span>
-            <span className="italic">Recharge</span>
+          <h1 className="font-serif text-cream font-bold leading-tight mb-4 text-[clamp(2.25rem,1.2rem+4vw,4rem)]">
+            PEMF Nashville
           </h1>
 
-          <ul className="text-cream/75 text-lg leading-relaxed mb-8 max-w-lg mx-auto md:mx-0 text-left space-y-2.5 list-none">
-            {[
-              'Stress and tension relief',
-              'Muscle and joint comfort',
-              'Rebound after workouts or activity',
-              'Improved energy & overall wellness',
-            ].map((item) => (
-              <li key={item} className="flex gap-3 items-start">
-                <span className="text-gold mt-0.5 shrink-0" aria-hidden>
-                  ✓
-                </span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+          <h2 className="font-serif text-cream/90 text-xl sm:text-2xl font-normal leading-snug mb-4 max-w-lg">
+            In-Home Sessions + Brentwood Office · Lisa Taylor, RN
+          </h2>
+
+          <p className="text-gold/90 text-sm sm:text-base font-medium tracking-wide mb-3 max-w-lg">
+            Nashville · Brentwood · Belle Meade · Green Hills · Franklin · Bellevue
+          </p>
+
+          <p className="font-script text-gold text-xl sm:text-2xl mb-8 max-w-lg">
+            {siteConfig.tagline}
+          </p>
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-10 w-full max-w-md mx-auto md:max-w-none md:mx-0 justify-center md:justify-start">

@@ -22,24 +22,24 @@ const dancing = Dancing_Script({
 })
 
 export const metadata: Metadata = {
-  title: 'PEMF Nashville | In-Home Wellness Sessions | Lisa Taylor, RN',
+  title: 'PEMF Nashville | In-Home Sessions + Brentwood Office | Lisa Taylor, RN',
   description:
-    'Mobile PEMF wellness sessions for muscle comfort, recovery support, and relaxation in Nashville, TN. Lisa Taylor, Registered Nurse, comes to your home. Book a free consult today.',
+    'PEMF sessions with Lisa Taylor, RN. In-home visits across Nashville, Brentwood, Belle Meade, and Franklin, plus office sessions at Kinnection Clinic in Brentwood. Book a free consult.',
   keywords: [
     'PEMF Nashville',
+    'PEMF Brentwood',
+    'Kinnection Clinic',
+    'in-home PEMF Nashville',
     'mobile wellness Nashville',
     'muscle comfort Nashville',
-    'recovery support Nashville',
-    'in-home wellness Nashville',
-    'stress relief Nashville',
-    'equine PEMF Nashville',
-    'animal wellness Nashville',
+    'Belle Meade wellness',
+    'Franklin PEMF',
     'Lisa Taylor RN',
   ],
   openGraph: {
-    title: 'PEMF Nashville | In-Home Wellness Sessions',
+    title: 'PEMF Nashville | In-Home Sessions + Brentwood Office',
     description:
-      'Mobile PEMF wellness sessions for people & animals in Nashville, TN. Lisa Taylor, RN comes to your home.',
+      'PEMF sessions with Lisa Taylor, RN. In-home visits across Nashville and office sessions at Kinnection Clinic in Brentwood.',
     siteName: 'PEMF Nashville',
     locale: 'en_US',
     type: 'website',

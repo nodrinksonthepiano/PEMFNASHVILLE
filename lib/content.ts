@@ -17,9 +17,29 @@ export const siteConfig = {
 
 /** Short labels for Calendly + SMS scheduling CTAs */
 export const schedulingLinks = {
-  bookConsult: 'Book a consult',
+  bookConsult: 'Book a free consult',
   textToSchedule: 'text to schedule',
 } as const
+
+/** Office vs in-home session options */
+export const sessionLocations = [
+  {
+    id: 'office',
+    title: 'Kinnection Clinic · Brentwood',
+    headline: 'Office sessions at Kinnection Clinic in Brentwood',
+    price: '$100',
+    duration: '60 minutes',
+    description: 'Convenient, private, and easy to get to',
+  },
+  {
+    id: 'in-home',
+    title: 'In-Home Sessions',
+    headline: 'Lisa comes to you with everything needed',
+    price: '$150',
+    duration: '60 minutes',
+    description: 'Nashville · Belle Meade · Green Hills · Franklin · Brentwood · Bellevue',
+  },
+] as const
 
 /** Copy for fixed footer promo (The Land weekends) */
 export const weekendLandPromo = {
@@ -99,7 +119,7 @@ export const faqs = [
     id: 2,
     question: 'What should I expect during a session?',
     answer:
-      'Sessions are designed to be comfortable and relaxing. You remain fully clothed while the PEMF applicator is placed on or near the body. Most clients feel a gentle pulsing sensation and report feeling deeply relaxed during and after the session. Sessions are conducted in your own home at your convenience.',
+      'Sessions are designed to be comfortable and relaxing. You remain fully clothed while the PEMF applicator is placed on or near the body. Most clients feel a gentle pulsing sensation and report feeling deeply relaxed during and after the session. Sessions are available in your home or at Kinnection Clinic in Brentwood.',
   },
   {
     id: 3,
@@ -137,6 +157,18 @@ export const faqs = [
     answer:
       'Lisa is based in Bellevue and serves the greater Nashville area including Belle Meade, Green Hills, Brentwood, Franklin, and surrounding communities. Reach out to confirm your location.',
   },
+  {
+    id: 9,
+    question: 'Do you have an office location?',
+    answer:
+      'Yes — Lisa sees clients at Kinnection Clinic in Brentwood, in addition to offering in-home sessions throughout the Nashville area. Office sessions are $100 for 60 minutes.',
+  },
+  {
+    id: 10,
+    question: 'What\'s the difference between an office session and an in-home session?',
+    answer:
+      'Both are full 60-minute sessions with the same equipment and the same care. In-home sessions are $150 and include Lisa traveling to you with everything needed, so you never have to leave home. Office sessions are $100 at Kinnection Clinic in Brentwood.',
+  },
 ]
 
 export type PricingTier = {
@@ -153,40 +185,22 @@ export type PricingTier = {
 
 export const pricing: PricingTier[] = [
   {
-    id: 'single',
-    label: 'Single Session',
-    price: '$120',
-    sessions: '1 session',
-    perSession: '$120/session',
+    id: 'office',
+    label: 'Office Session at Kinnection Clinic',
+    price: '$100',
+    sessions: '60 minutes',
+    perSession: 'Kinnection Clinic · Brentwood',
     highlight: false,
-    description: 'Perfect for trying PEMF for the first time.',
+    description: 'Office sessions at Kinnection Clinic in Brentwood. Convenient, private, and easy to get to.',
   },
   {
-    id: 'three-pack',
-    label: '3-Session Package',
-    price: '$330',
-    sessions: '3 sessions',
-    perSession: '$110/session',
-    highlight: false,
-    description: 'A focused series — most clients notice cumulative benefits.',
-  },
-  {
-    id: 'membership-twice-monthly',
-    label: 'Monthly Membership',
-    price: '$200/month',
-    sessions: '2 sessions per month',
-    perSession: '$100/session',
+    id: 'in-home',
+    label: 'In-Home Session',
+    price: '$150',
+    sessions: '60 minutes',
+    perSession: 'Lisa comes to you',
     highlight: true,
-    badge: 'Most Popular',
-    description: 'Steady support built into your month—ideal for sustained wellness habits.',
-  },
-  {
-    id: 'membership-weekly',
-    label: 'Weekly Membership',
-    price: '$360/month',
-    sessions: '4 sessions per month',
-    perSession: '$90/session',
-    highlight: false,
-    description: 'Our strongest cadence for consistent, ongoing support.',
+    description:
+      'Full session in the comfort of your home. Nashville · Belle Meade · Green Hills · Franklin · Brentwood · Bellevue.',
   },
 ]

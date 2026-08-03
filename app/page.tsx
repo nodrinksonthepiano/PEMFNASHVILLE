@@ -1,5 +1,6 @@
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
+import WhereToFindLisa from '@/components/WhereToFindLisa'
 import WhatIsPEMF from '@/components/WhatIsPEMF'
 import Services from '@/components/Services'
 import AboutLisa from '@/components/AboutLisa'
@@ -16,6 +17,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <WhereToFindLisa />
         <WhatIsPEMF />
         <Services />
         <AboutLisa />

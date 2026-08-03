@@ -8,11 +8,11 @@ export default function Services() {
         {/* Header */}
         <div className="text-center mb-14">
           <span className="section-label">Offerings &amp; Services</span>
-          <h2 className="section-title-dark mb-4">How Can Lisa RN Support You?</h2>
+          <h2 className="section-title-dark mb-4">PEMF Sessions in Nashville &amp; Brentwood</h2>
           <div className="divider-gold mx-auto" />
           <p className="text-cream/60 text-lg max-w-xl mx-auto mt-4">
-            Every session is tailored to you. Lisa comes to your home with everything needed
-            for a comfortable, restorative experience.
+            Every session is tailored to you — at Kinnection Clinic in Brentwood or in the comfort
+            of your home.
           </p>
         </div>
 

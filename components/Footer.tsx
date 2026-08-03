@@ -22,8 +22,8 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-cream/45 text-sm leading-relaxed max-w-xs">
-              Mobile wellness sessions for people &amp; animals in Nashville, TN.
-              Delivered to your home by Lisa Taylor, RN.
+              Wellness sessions for people &amp; animals in Nashville and Brentwood — in-home
+              visits and office sessions at Kinnection Clinic with Lisa Taylor, RN.
             </p>
           </div>
 

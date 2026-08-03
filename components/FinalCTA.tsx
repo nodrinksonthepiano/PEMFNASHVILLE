@@ -33,7 +33,7 @@ export default function FinalCTA() {
       <div className="relative max-w-3xl mx-auto text-center">
         <span className="font-script text-gold text-2xl block mb-4">Ready to feel better?</span>
         <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-cream font-bold mb-6 leading-tight">
-          Your Home.<br />
+          Your Home or Our Office.<br />
           <span className="text-gold italic">Your Comfort.</span><br />
           Your Session.
         </h2>
@@ -58,7 +58,7 @@ export default function FinalCTA() {
 
         <div className="mt-10 flex flex-wrap justify-center gap-6 text-cream/35 text-sm">
           <span className="flex items-center gap-2">
-            <span className="text-gold">✓</span> In-Home Sessions
+            <span className="text-gold">✓</span> In-Home &amp; Office
           </span>
           <span className="flex items-center gap-2">
             <span className="text-gold">✓</span> RN-Administered

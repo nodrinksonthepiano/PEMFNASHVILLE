@@ -21,23 +21,25 @@ export const schedulingLinks = {
   textToSchedule: 'text to schedule',
 } as const
 
-/** Office vs in-home session options */
+/** Office vs in-home session options — logistics copy (pricing details live in `pricing`) */
 export const sessionLocations = [
   {
     id: 'office',
     title: 'Kinnection Clinic · Brentwood',
-    headline: 'Office sessions at Kinnection Clinic in Brentwood',
+    headline: 'A private treatment room in Brentwood',
     price: '$100',
     duration: '60 minutes',
-    description: 'Convenient, private, and easy to get to',
+    description:
+      'Easy to reach from I-65 and Franklin Road, with free parking on site. Book mornings, lunch breaks, or early evenings — whatever fits your week.',
   },
   {
     id: 'in-home',
     title: 'In-Home Sessions',
-    headline: 'Lisa comes to you with everything needed',
+    headline: 'Lisa travels to you with the full setup',
     price: '$150',
     duration: '60 minutes',
-    description: 'Nashville · Belle Meade · Green Hills · Franklin · Brentwood · Bellevue',
+    description:
+      'Serving Nashville, Belle Meade, Green Hills, Franklin, Brentwood, and Bellevue. Ideal when comfort at home, mobility, or a tight schedule matters most.',
   },
 ] as const
 
@@ -191,7 +193,7 @@ export const pricing: PricingTier[] = [
     sessions: '60 minutes',
     perSession: 'Kinnection Clinic · Brentwood',
     highlight: false,
-    description: 'Office sessions at Kinnection Clinic in Brentwood. Convenient, private, and easy to get to.',
+    description: 'Single office visit · 60 minutes · Kinnection Clinic, Brentwood.',
   },
   {
     id: 'in-home',
@@ -200,8 +202,7 @@ export const pricing: PricingTier[] = [
     sessions: '60 minutes',
     perSession: 'Lisa comes to you',
     highlight: true,
-    description:
-      'Full session in the comfort of your home. Nashville · Belle Meade · Green Hills · Franklin · Brentwood · Bellevue.',
+    description: 'Single in-home visit · 60 minutes. Four-session package ($540) listed below.',
   },
 ]
 
@@ -222,6 +223,6 @@ export const inHomePackages: InHomePackage[] = [
     price: '$540',
     sessions: '4 in-home sessions',
     perSession: '$135 each',
-    description: 'In-home visits only.',
+    description: 'Four in-home visits · $135 per session · paid as a package.',
   },
 ]

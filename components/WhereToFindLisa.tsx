@@ -17,12 +17,11 @@ export default function WhereToFindLisa() {
               className="bg-cream-dark rounded-3xl p-7 sm:p-8 border border-mauve/15 hover:border-gold/30 transition-colors"
             >
               <h3 className="font-serif text-plum text-2xl font-bold mb-2">{location.title}</h3>
-              <p className="text-plum/75 text-lg leading-snug mb-4">{location.headline}</p>
-              <p className="font-serif text-3xl font-bold text-plum mb-1">
-                {location.price}
-                <span className="text-plum/50 text-lg font-sans font-medium"> · {location.duration}</span>
+              <p className="text-plum/80 text-lg leading-snug mb-3">{location.headline}</p>
+              <p className="text-plum/65 text-sm leading-relaxed">{location.description}</p>
+              <p className="text-plum/45 text-sm font-medium mt-4">
+                {location.price} · {location.duration}
               </p>
-              <p className="text-plum/60 text-sm mt-3 leading-relaxed">{location.description}</p>
             </div>
           ))}
         </div>

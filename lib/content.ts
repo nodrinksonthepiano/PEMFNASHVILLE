@@ -204,3 +204,24 @@ export const pricing: PricingTier[] = [
       'Full session in the comfort of your home. Nashville · Belle Meade · Green Hills · Franklin · Brentwood · Bellevue.',
   },
 ]
+
+export type InHomePackage = {
+  id: string
+  label: string
+  price: string
+  sessions: string
+  perSession: string
+  description: string
+}
+
+/** In-home session packages (office sessions sold individually only) */
+export const inHomePackages: InHomePackage[] = [
+  {
+    id: 'in-home-four-pack',
+    label: 'Four In-Home Sessions',
+    price: '$540',
+    sessions: '4 in-home sessions',
+    perSession: '$135 each',
+    description: 'In-home visits only.',
+  },
+]

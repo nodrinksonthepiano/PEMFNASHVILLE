@@ -1,4 +1,4 @@
-import { pricing, siteConfig, schedulingLinks } from '@/lib/content'
+import { pricing, inHomePackages, siteConfig, schedulingLinks } from '@/lib/content'
 
 function schedulingLinkClasses(highlight: boolean) {
   return highlight
@@ -49,6 +49,29 @@ export default function Pricing() {
             </div>
           ))}
         </div>
+
+        {inHomePackages.length > 0 && (
+          <div className="max-w-xl mx-auto mb-10">
+            <h3 className="text-center font-serif text-cream/80 text-xl mb-6">In-Home Packages</h3>
+            <div className="space-y-4">
+              {inHomePackages.map((pkg) => (
+                <div
+                  key={pkg.id}
+                  className="rounded-2xl p-6 border border-gold/25 bg-plum-light/30 hover:border-gold/40 transition-colors"
+                >
+                  <h4 className="font-serif text-cream text-lg font-bold mb-2">{pkg.label}</h4>
+                  <p className="font-serif text-3xl font-bold text-cream mb-1">
+                    {pkg.price}
+                    <span className="text-base font-sans font-medium text-cream/50">
+                      {' '}· {pkg.perSession}
+                    </span>
+                  </p>
+                  <p className="text-cream/55 text-sm mt-3 leading-relaxed">{pkg.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         <p className="text-center text-cream/75 text-base mb-6">
           <a

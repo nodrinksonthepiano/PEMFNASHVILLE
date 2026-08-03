@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Inter, Dancing_Script } from 'next/font/google'
 import './globals.css'
-import WeekendLandBanner from '@/components/WeekendLandBanner'
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -54,7 +53,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <body className="font-sans antialiased">
         {children}
-        <WeekendLandBanner />
       </body>
     </html>
   )

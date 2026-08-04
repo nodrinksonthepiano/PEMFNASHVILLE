@@ -1,77 +1,122 @@
 # PEMF Nashville — Product Requirements Document (PRD)
-> Version 1.0 | Created: 2026-04-05 | Status: Approved, Phase 1 In Progress
+
+> **Version 2.0** | Last updated: 2026-08-03 | **Status: Production live**  
+> Companion doc: [MEMORY.md](./MEMORY.md) — rules, current facts, and edit map.
 
 ---
 
-## 1. Project Summary
+## 1. Project summary
 
-Build a **high-conversion, self-editable website** for PEMF Nashville (Lisa Taylor, RN) to replace the current Canva site. The site must be legally compliant, mobile-first, SEO-optimized for Nashville, and deployable to Vercel via pemfnashville.com.
+**PEMF Nashville** is a live, high-conversion marketing site for Lisa Taylor, RN — a certified Pulse PEMF practitioner serving Nashville and Brentwood.
 
-**Current site:** https://pemfnashville.my.canva.site/
-**Target domain:** pemfnashville.com (GoDaddy)
-**Hosting:** Vercel (deployed after local testing)
+| Item | Value |
+|------|-------|
+| **Production URL** | [https://www.pemfnashville.com](https://www.pemfnashville.com) |
+| **Hosting** | Vercel |
+| **Domain** | pemfnashville.com (GoDaddy) → www.pemfnashville.com |
+| **Repo** | github.com/nodrinksonthepiano/PEMFNASHVILLE |
+| **Legacy site** | [pemfnashville.my.canva.site](https://pemfnashville.my.canva.site/) — still up; should be retired |
+
+**What v1 achieved:** Replaced the Canva site with a Next.js app — mobile-first, SEO-oriented, legally compliant copy, office + in-home booking paths, four SEO topic pages, and 15 FAQs.
+
+**What v1 did not build:** TinaCMS self-editing, Google Analytics, JSON-LD schema, sitemap/robots, privacy/terms pages, internal links to topic pages.
+
+> **Deploy state moves.** Last verified commit: `43c773d` (2026-08-03). Run `git log -1 --oneline` before citing current HEAD.
 
 ---
 
-## 2. Business Info
+## 2. Business info
 
 | Field | Value |
 |-------|-------|
 | Owner | Lisa Taylor |
 | Credentials | Registered Nurse (RN), Certified Pulse PEMF Practitioner, Equestrian |
 | Phone | (615) 669-2391 |
-| Email (professional) | lisa@pemfnashville.com |
-| Email (old — retire for business) | TrottingFlower@gmail.com |
-| Calendly | calendly.com/pemfnashville/consult |
-| Venmo | @Lisataylor_ (confirm before launch — may change) |
-| Location | Nashville, TN — Mobile In-Home Sessions |
-| Pricing | $120 in-home session; package discounts available |
-| Add-on | Red light therapy (separate session, additional cost — TBD pricing) |
+| Email | lisa@pemfnashville.com |
+| Calendly | [calendly.com/pemfnashville/consult](https://calendly.com/pemfnashville/consult) |
+| Venmo | @Lisataylor_ |
+| Base area | Bellevue / West Nashville |
+
+### Live pricing
+
+| Option | Price | Duration |
+|--------|-------|----------|
+| Office session at Kinnection Clinic, Brentwood | **$100** | 60 min |
+| In-home session | **$150** | 60 min |
+| Four in-home sessions (package) | **$540** | $135 each |
+
+Office sessions sold individually. In-home four-pack is the only package on site today.
+
+### Add-on
+
+Red light therapy available as a separate add-on session — contact Lisa for details. Listed in Services section copy.
+
+### Revenue goals
+
+- Minimum: $5,000/month
+- Target: $10,000+/month
 
 ---
 
 ## 3. Services
 
-### For People
-- **Relief** — supports comfort for muscle and joint discomfort
-- **Recovery** — supports the body after workouts, physical activity, or strain
-- **Relaxation** — promotes deep rest, stress relief, and a sense of balance
+### Hero tagline
 
-### For Animals (secondary audience)
-- Horses — equestrians are already familiar with PEMF for animals
-- Dogs — shown on site as a secondary, authentic service
+**Relief · Recover · Recharge** (`siteConfig.tagline`)
 
-> ⚠️ All service descriptions must use compliant language. See MEMORY.md.
+### Service cards (homepage)
+
+| Card | Subhead |
+|------|---------|
+| **Relief** | Muscle and joint discomfort support |
+| **Recovery** | Workout and athletic recovery |
+| **Recharge** | Stress, energy, and whole-body reset |
+
+> Old v1 PRD listed "Relaxation" as the third card — live site uses **Recharge**.
+
+### For animals (secondary audience)
+
+- Horses — equestrian bridge audience
+- Dogs — authentic secondary service
+
+All service descriptions use compliant language. See [MEMORY.md](./MEMORY.md) for the full compliance list.
 
 ---
 
-## 4. Target Audiences
+## 4. Target audiences
 
-1. **Primary:** High-end women in Nashville (Belle Meade, Green Hills, West Nashville / Bellevue), 40s–50s, seeking non-pharmaceutical wellness — they do NOT know what PEMF is, they know their symptoms
+1. **Primary:** High-end women in Nashville (Belle Meade, Green Hills, West Nashville / Bellevue), 40s–50s, seeking non-pharmaceutical wellness — they often don't know what PEMF is; they know their symptoms
 2. **Bridge audience:** Equestrians who know PEMF for horses but haven't tried it themselves
 3. **Secondary:** Pet owners (dogs, horses) seeking animal wellness support
 
-### Positioning Rule
-Nobody searches "PEMF Nashville." Lead with the symptom/outcome they feel. Introduce PEMF as the solution after engagement. The technology is the answer, not the hook.
+### Positioning rule
+
+Nobody searches "PEMF Nashville" cold. Lead with the symptom/outcome they feel. Introduce PEMF as the solution after engagement.
 
 ---
 
-## 5. Tech Stack
+## 5. Tech stack
 
-| Layer | Tool | Why |
-|-------|------|-----|
-| Framework | Next.js 15 (App Router, TypeScript) | Fast, SEO-friendly, Vercel-native |
-| Styling | Tailwind CSS | Rapid, consistent styling |
-| CMS / Editor | TinaCMS | Visual in-page editing — Lisa edits text/photos/testimonials by clicking on her live site |
-| Hosting | Vercel | Free tier, instant deploys, edge CDN |
-| Domain | pemfnashville.com via GoDaddy | Already owned |
-| Repo | GitHub (Lisa to set up) | Required for TinaCMS + Vercel |
+| Layer | Tool | Notes |
+|-------|------|-------|
+| Framework | Next.js 15 (App Router, TypeScript) | Live |
+| UI | React 19 | Live |
+| Styling | Tailwind CSS | Live |
+| Hosting | Vercel | Live |
+| Content | TypeScript files | `lib/content.ts`, `lib/seo-topics.ts` — **no CMS** |
+| Domain | pemfnashville.com via GoDaddy | Live |
+| Repo | GitHub | Live |
+
+**Not in stack:** TinaCMS (considered in April 2026 planning; never installed), Google Analytics, JSON-LD schema.
+
+**Content editing:** Lisa/Jai edit TS/TSX files and commit. No in-browser editor.
 
 ---
 
-## 6. Brand Identity
+## 6. Brand identity
 
 ### Colors
+
 | Role | Name | Hex |
 |------|------|-----|
 | Primary | Deep plum | `#3D1A28` |
@@ -81,173 +126,242 @@ Nobody searches "PEMF Nashville." Lead with the symptom/outcome they feel. Intro
 | Light text | Off-white | `#F0E8E0` |
 
 ### Fonts
-- **Headlines:** Playfair Display (serif, elegant)
-- **Body:** Inter (clean, readable)
-- **Script accent:** Dancing Script (matches logo "Nashville" script lettering)
+
+- **Headlines:** Playfair Display
+- **Body:** Inter
+- **Script accent:** Dancing Script
 
 ### Logo
-`PEMFNASHVILLELOGO42026.jpg` — Dark horse with gold constellation/electromagnetic lines through body. Sacred geometry in gold. Dusky mauve flowers. Circular border. Deep plum text.
+
+`PEMFNASHVILLELOGO42026.jpg` — header and footer.
 
 ### Vibe
-Dusky, luminous, healing-adjacent without making medical claims. Warm gold sparkle = the PEMF energy moving through the body. Feels like a high-end wellness brand, not a medical clinic.
+
+Dusky, luminous, wellness-adjacent without medical claims. High-end wellness brand, not a medical clinic.
 
 ---
 
-## 7. Photo Assets
+## 7. Site architecture
 
-| File | Description | Use |
-|------|-------------|-----|
-| `PEMFNASHVILLELOGO42026.jpg` | Brand logo | Header, footer |
-| `bubble-background.png` | Swirling bubble macro | Hero background |
-| `RNHORSE.JPG` | Lisa + horse, golden hour | Hero, About section |
-| `RNDOGPEMF.jpg` | Lisa treating golden retriever (smiling) | Animals section hero |
-| `DOGSONPEMFCHAIR.jpg` | Two small dogs on PEMF mat | Animals section |
-| `HORSEPEMFRELEASE.JPG` | Chestnut horse yawning (release response) | Animals section — powerful for equestrians |
-| `HORSEPEMFRELEASE2.PNG` | Horse release | Animals section |
-| `CLIENT1.JPG` | Person relaxing in home during session | Services / how it works |
-| `CLIENT2.JPG` | PEMF coil on neck/shoulder (no face) | Services / how it works |
-| `CLIENT3.HEIC` | TBD | Convert first |
-| `CLIENT4.heic` | TBD | Convert first |
-| `DOGPEMF2.heic` | Dog receiving PEMF | Animals |
-| `DOGPEMFPAD.heic` | Dog on pad | Animals |
-| `HORSEHEADPEMF.HEIC` | Horse head PEMF | Animals |
-| `HORSEPEMF11.HEIC` | Horse PEMF | Animals |
-| `PEMFCHAIR.heic` | PEMF chair/mat setup | Equipment / what to expect |
-| `PEMFMACHINE1.HEIC` | Machine | Equipment |
-| `PEMFMACHINE2.HEIC` | Machine | Equipment |
+### Production routes
 
-**Consent status:** Verbal + written consent form on file for all client photos ✅
-**HEIC files:** Must be converted to WebP before use on web
+```
+/                              → Homepage (all sections)
+/pemf-for-recovery             → SEO topic page
+/pemf-for-joint-comfort        → SEO topic page
+/pemf-for-inflammation         → SEO topic page
+/pemf-for-back-discomfort      → SEO topic page (+ Lisa origin story)
+/privacy                       → 404 (footer links here — gap)
+/terms                         → 404 (footer links here — gap)
+```
+
+Each topic page: own `app/pemf-for-*/page.tsx`, `generateMetadata()`, shared `TopicPage.tsx`, copy in `lib/seo-topics.ts`.
+
+### Homepage section order (live)
+
+1. Sticky Header
+2. Hero
+3. Where to Find Lisa (`#locations`) — office + in-home
+4. What is PEMF
+5. Services — Relief / Recovery / Recharge
+6. About Lisa
+7. Testimonials — unified grid + Beth featured quote
+8. For Animals
+9. Pricing
+10. FAQ (15 questions)
+11. Final CTA
+12. Footer — disclaimer, press link, privacy/terms links
+
+### Header nav (live)
+
+Services · About · Testimonials · Pricing · FAQ
+
+**Gap:** No "Locations" link to `#locations`.
 
 ---
 
-## 8. Site Sections (in order, top to bottom)
+## 8. Section requirements (current state)
 
-### 8.1 Sticky Header
-- Logo (left)
-- Phone number `(615) 669-2391` (center/right, always visible)
-- CTA button: "Book Free Consult" → calendly.com/pemfnashville/consult (right)
-- Collapses cleanly on mobile
+### 8.1 Sticky header
 
-### 8.2 Hero Section
-- Background: `bubble-background.png` with plum/gold overlay
-- `RNHORSE.JPG` — Lisa + horse photo, prominent
-- Headline (compliant, high-conversion — TBD, needs legal review)
-- Sub-headline: service summary
-- CTA 1: "Book Free Consult" (Calendly)
-- CTA 2: "Text to Book: (615) 669-2391"
+- Logo, phone `(615) 669-2391`, social links, "Book Free Consult" CTA
+- Mobile hamburger menu
+- **Missing:** Locations nav item
 
-### 8.3 What is PEMF?
-- Plain-language education block
-- Short (3–4 sentences max)
-- Source language from Canva site (already compliant): "non-invasive wellness experience that uses gentle pulsed electromagnetic fields to support the body during a calming and restorative session"
-- Visual: bubble-background.png or machine photo
+### 8.2 Hero
 
-### 8.4 Services — Relief / Recovery / Relaxation
-- 3 cards, one per service
-- Photo per card from available assets
-- Short description each, legally compliant language
-- Price mention or CTA per card
+- Bubble background, Lisa + horse photo
+- Tagline: Relief · Recover · Recharge
+- CTAs: Calendly + text to book
 
-### 8.5 About Lisa
-- `RNHORSE.JPG` or a dedicated portrait
-- **Story:** Lisa found PEMF during her own wellness journey after being thrown from a horse and breaking a vertebra in her back. As a Registered Nurse and lifelong equestrian, she saw firsthand how PEMF supported her own body — and knew she had to share it.
-- Credentials: RN, Certified Pulse PEMF Practitioner, Equestrian
-- Warm, personal tone — not clinical
+### 8.3 Where to Find Lisa
 
-### 8.6 Testimonials
-- All 5 current testimonials (Roxanne, Emma, Jeff, Ashley, Beth)
-- Carousel or masonry grid layout
-- TinaCMS-editable — Lisa can add new ones herself
-- Note: Client words are their own. We do not add medical spin.
+- Kinnection Clinic · Brentwood ($100)
+- In-home sessions ($150)
+- Anchor: `#locations`
 
-### 8.7 For Animals
-- Section header: "PEMF for Your Animals"
-- Hero image: `RNDOGPEMF.jpg` (Lisa + golden retriever, instantly lovable)
-- Supporting images: dogs on mat, horse release
-- Copy: Bridge equestrian knowledge to human — "Your horse has known it for years."
-- Note about HORSEPEMFRELEASE.JPG: The open-mouth yawn IS the famous "release response" — equestrians will recognize this immediately as a sign it's working. Caption accordingly.
+### 8.4 What is PEMF
 
-### 8.8 Pricing
-| Package | Sessions | Price | Per Session |
-|---------|----------|-------|-------------|
-| Single Session | 1 | $125 | $125 |
-| 4-Session Pack | 4 | $450 | $112.50 |
-| 6-Session Pack | 6 | $600 | $100 |
-| Wellness Monthly *(coming soon)* | ~4/month | ~$400 | $100/wk |
+- Plain-language education, compliant wording
 
-- Red light therapy: listed as available add-on (separate session, pricing TBD — use "contact for pricing" or "ask during consult")
-- Monthly retainer model under consideration — build UI to support it when ready
-- CTA: Book Consult
+### 8.5 Services
 
-### 8.9 FAQ
-Key questions to include (TinaCMS-editable):
+- Three cards: Relief, Recovery, Recharge
+- Red light add-on note
+
+### 8.6 About Lisa
+
+- Horse fall → compression fracture → PEMF journey (homepage version uses "a few years ago" / "compression fracture")
+- RN credentials, warm personal tone
+
+### 8.7 Testimonials
+
+- Unified grid (Roxanne, Emma, Jeff, Ashley, Joely)
+- Beth featured quote block
+- Client words preserved; no medical spin added
+
+### 8.8 For Animals
+
+- Dogs and horses imagery and copy
+
+### 8.9 Pricing
+
+- $100 office · $150 in-home · $540 four-pack
+- Book consult CTA
+
+### 8.10 FAQ (15 questions)
+
 1. What is PEMF and how does it work?
 2. What should I expect during a session?
 3. How many sessions will I need?
-4. **What are the contraindications?** *(Required for liability)*
-   - Pregnancy
-   - Implanted electrical devices (pacemakers, cochlear implants, insulin pumps, spinal cord stimulators, intrathecal drug pumps)
-   - Active or uncontrolled bleeding
-   - Epilepsy / seizure disorders (consult your physician)
-   - Active cancer (consult your physician)
-   - *(Verify full list against official Pulse PEMF documentation)*
+4. What are the contraindications? *(required for liability)*
 5. Is PEMF safe?
 6. Do you work with animals?
 7. How do I pay?
-8. What areas do you serve?
+8. What areas of Nashville do you serve?
+9. Do you have an office location?
+10. What's the difference between an office session and an in-home session?
+11. What do people use PEMF for?
+12. Can PEMF help with arthritis or joint stiffness?
+13. Is PEMF used for workout recovery?
+14. What is PEMF used for after an injury?
+15. Does PEMF help with inflammation?
 
-### 8.10 Final CTA Block
-- "Ready to feel better?" (or approved compliant variant)
-- Button: "Book Free Consult" (Calendly)
-- Button: "Text Lisa: (615) 669-2391"
-- Venmo link / @Lisataylor_ (confirm handle before launch)
+**Gap:** FAQ answers 11–15 do not yet link to the four topic pages.
 
-### 8.11 Footer
-- Logo
-- Phone, email
-- Venmo link
-- Privacy Policy link
-- Terms link
-- **Legal disclaimer:** "PEMF is a wellness service, not a medical treatment. Not intended to diagnose, treat, cure, or prevent any disease or condition. Results may vary."
+### 8.11 Final CTA
 
----
+- Book consult + text Lisa CTAs
 
-## 9. TinaCMS Editable Content (what Lisa controls without a developer)
+### 8.12 Footer
 
-- All testimonials (add, edit, remove)
-- All FAQ questions and answers
-- About Lisa text
-- Pricing amounts and package details
-- Services descriptions
-- Hero headline and sub-headline
-- Contact info (phone, email, Venmo, Calendly link)
+- Logo, phone, email, Venmo, social
+- **Featured in the Kingston Springs Gazette** — external link (live)
+- Privacy Policy link → **404**
+- Terms link → **404**
+- Legal disclaimer on every page
 
 ---
 
-## 10. SEO Requirements
+## 9. SEO topic pages
 
-- Page title: `PEMF Nashville | In-Home PEMF Wellness Sessions | Lisa Taylor, RN`
-- Meta description: ~155 characters, includes "Nashville PEMF" and "in-home"
-- Local business schema markup (JSON-LD)
-- Open Graph tags for social sharing
-- Nashville + surrounding area keywords throughout copy
-- Google Analytics + Search Console setup on launch
+Four intent-matched landing pages for organic search. Copy in `lib/seo-topics.ts`.
+
+| Slug | Purpose |
+|------|---------|
+| `/pemf-for-recovery` | Workout / athletic recovery intent |
+| `/pemf-for-joint-comfort` | Joint stiffness / arthritis-adjacent searches |
+| `/pemf-for-inflammation` | Inflammation research intent |
+| `/pemf-for-back-discomfort` | Back discomfort + Lisa first-person origin story |
+
+**Gaps:**
+
+- Zero inbound internal links from homepage, FAQ, or footer (orphan pages for crawlers)
+- Lisa-voice personal sections planned for recovery, joint, inflammation — **not yet written** (back-discomfort page has one)
 
 ---
 
-## 11. Phase Plan
+## 10. SEO requirements
 
-| Phase | What | Status |
-|-------|------|--------|
-| 0 | Housekeeping: rename folder, convert HEIC, optimize images | ⏳ Pending approval |
-| 1 | Next.js + TinaCMS setup | ⏳ Pending |
-| 2 | Build all 11 sections | ⏳ Pending |
-| 3 | TinaCMS content schema + editor | ⏳ Pending |
-| 4 | Copy audit (legal compliance review) | ⏳ Pending |
-| 5 | Local test + review | ⏳ Pending |
-| 6 | GitHub repo setup | ⏳ Pending (Lisa) |
-| 7 | Vercel deploy | ⏳ Pending |
-| 8 | Connect pemfnashville.com | ⏳ Pending |
-| 9 | Google Analytics + Search Console | ⏳ Pending |
-| 10 | Ongoing: Lisa edits via TinaCMS | ♾️ Forever |
+### Done
+
+- Page title and meta description in `app/layout.tsx`
+- Keywords array including Brentwood, recovery, joint comfort
+- Four topic pages with unique `generateMetadata()` per route
+- 15 FAQs including intent-matched questions 11–15
+- Compliant symptom-first language in services and topic copy
+
+### Not done (backlog)
+
+- Internal links from FAQ 11–15 and footer to topic pages
+- `robots.txt` and XML sitemap
+- Google Search Console submission
+- Local business JSON-LD schema
+- Google Analytics
+
+---
+
+## 11. Press and external content
+
+**Kingston Springs Gazette** (May 18, 2026 · Cate Burgan):
+
+- [Local nurse brings PEMF wellness therapy to Kingston Springs](https://www.ksgazette.com/local-nurse-brings-pemf-wellness-therapy-to-kingston-springs/)
+- Footer external link only — no `/press` page yet
+- Back-discomfort page has Lisa origin story (February 2025 horse fall, fractured vertebra, ~two weeks PEMF) — compliant reframe, not article republish
+
+**Do not** paste Gazette quotes into site voice. See [MEMORY.md](./MEMORY.md).
+
+---
+
+## 12. Backlog (prioritized)
+
+| Priority | Task | Status |
+|----------|------|--------|
+| 1 | Sync PRD + MEMORY | ✅ This update |
+| 2 | Remove `public/images/PRD.md` and `MEMORY.md` | Pending — publicly reachable stale copies |
+| 3 | Internal links — FAQ 11–15 + footer → topic pages | Pending |
+| 4 | Lisa-voice sections on recovery / joint / inflammation pages | Pending |
+| 5 | `/privacy` and `/terms` pages | Pending — footer 404 |
+| 6 | Header "Locations" → `#locations` | Pending |
+| 7 | Sitemap + robots.txt + Search Console | Pending |
+| 8 | Review sprint (~9 reviews as of Aug 2026; target 15+) | Ongoing |
+| 9 | Retire Canva site | Pending |
+| 10 | Compress images in `public/images/` | Pending |
+
+**Deferred:** `/press` page · AboutLisa bio expansion · TinaCMS · GA · JSON-LD · image renames
+
+---
+
+## 13. Dormant / unused assets
+
+| Item | Status |
+|------|--------|
+| `components/WeekendLandBanner.tsx` | In repo; not in layout — do not re-enable without Lisa OK |
+| `weekendLandPromo` in `lib/content.ts` | Copy exists; unused |
+| `testimonialGroups` in `lib/content.ts` | Defined; unused |
+| `public/images/PRD.md` and `MEMORY.md` | Stale April 2026 copies; remove from public folder |
+
+---
+
+## 14. Photo assets
+
+See original asset inventory in git history (April 2026 PRD). Key live images:
+
+- `PEMFNASHVILLELOGO42026.jpg` — logo
+- `bubble-background.png` — hero
+- `RNHORSE.JPG` — hero / about
+- `RNDOGPEMF.jpg`, dog/horse PEMF images — animals section
+- `CLIENT1.JPG`, `CLIENT2.JPG`, `roxchair.jpeg` — services
+
+**Consent:** Verbal + written consent on file for client photos.
+
+**Performance note:** ~94 MB total in `public/images/` — compression backlog item.
+
+---
+
+## 15. Rules of engagement
+
+- **Lisa/Jai handles all git.**
+- Agent reads, reports, edits approved files only.
+- One task per session when possible.
+- Full compliance rules and edit map: [MEMORY.md](./MEMORY.md).

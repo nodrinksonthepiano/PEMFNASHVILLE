@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { siteConfig } from '@/lib/content'
+import { siteConfig, pressFeature } from '@/lib/content'
 
 export default function Footer() {
   return (
@@ -86,6 +86,17 @@ export default function Footer() {
             wellness services, not medical treatments. These sessions are not intended to diagnose, treat,
             cure, or prevent any disease or medical condition. Results may vary. Individual experiences differ.
             Please consult your physician regarding any medical concerns before booking.
+          </p>
+
+          <p className="text-cream/30 text-xs">
+            <a
+              href={pressFeature.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gold/70 transition-colors underline decoration-gold/25 underline-offset-2"
+            >
+              {pressFeature.label}
+            </a>
           </p>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">

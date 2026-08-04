@@ -21,6 +21,12 @@ export const schedulingLinks = {
   textToSchedule: 'text to schedule',
 } as const
 
+/** Local press — link out only; article lives on publisher site */
+export const pressFeature = {
+  label: 'Featured in the Kingston Springs Gazette',
+  url: 'https://www.ksgazette.com/local-nurse-brings-pemf-wellness-therapy-to-kingston-springs/',
+} as const
+
 /** Office vs in-home session options — logistics copy (pricing details live in `pricing`) */
 export const sessionLocations = [
   {
@@ -187,7 +193,7 @@ export const faqs = [
     id: 8,
     question: 'What areas of Nashville do you serve?',
     answer:
-      'Lisa is based in Bellevue and serves the greater Nashville area including Belle Meade, Green Hills, Brentwood, Franklin, and surrounding communities. Reach out to confirm your location.',
+      'Lisa is based in Bellevue and serves the greater Nashville area including Belle Meade, Green Hills, Brentwood, Franklin, Kingston Springs, Fairview, Cool Springs, Leipers Fork, and surrounding communities. Reach out to confirm your location.',
   },
   {
     id: 9,

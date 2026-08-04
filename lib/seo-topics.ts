@@ -143,6 +143,12 @@ export const seoTopics: SeoTopic[] = [
       'Back discomfort — whether from daily strain, long hours at a desk, physical work, or recovery after activity — is one of the most common reasons people explore wellness options. Many Nashville-area clients ask about PEMF for back-related tension and general discomfort. This page explains the wellness service Lisa offers and how sessions are structured.',
     sections: [
       {
+        heading: 'Why I understand back discomfort personally',
+        paragraphs: [
+          'In February 2025 I was thrown from a horse and fractured a vertebra in my spine. As a nurse and a lifelong equestrian, I knew what the conventional path looked like — rest, and managing the discomfort day to day — and I wanted to explore what else might support my recovery. That search is how I found Pulse PEMF. I used it consistently for about two weeks. Everyone\'s body is different, but that stretch is a big part of why I work with people dealing with back discomfort now — I know what it\'s like to be searching.',
+        ],
+      },
+      {
         heading: 'What clients often describe',
         paragraphs: [
           'People mention tightness in the lower back, stiffness between the shoulders, or a general sense that their back "holds" tension — especially after sleep, travel, or demanding weeks. PEMF is a non-invasive wellness session, not a medical treatment, and results vary from person to person.',

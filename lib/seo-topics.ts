@@ -135,10 +135,10 @@ export const seoTopics: SeoTopic[] = [
   },
   {
     slug: 'pemf-for-back-discomfort',
-    title: 'PEMF for Back Discomfort | Nashville & Brentwood',
+    title: 'Back Discomfort & Tension Support | Nashville & Brentwood PEMF',
     metaDescription:
       'PEMF wellness sessions for back discomfort support in Nashville and Brentwood. Lisa Taylor, RN — in-home and office sessions. Book a free consult.',
-    h1: 'PEMF for Back Discomfort',
+    h1: 'Back Discomfort & Tension Support in Nashville',
     subtitle: 'Nashville · Brentwood · In-Home & Office Sessions',
     intro:
       'Back discomfort — whether from daily strain, long hours at a desk, physical work, or recovery after activity — is one of the most common reasons people explore wellness options. Many Nashville-area clients ask about PEMF for back-related tension and general discomfort. This page explains the wellness service Lisa offers and how sessions are structured.',
@@ -157,6 +157,13 @@ export const seoTopics: SeoTopic[] = [
         ],
       },
       {
+        heading: 'Looking for back pain relief in Nashville?',
+        paragraphs: [
+          'People often use phrases like “back pain relief” when researching options for tension, stiffness, soreness, or ongoing discomfort. PEMF Nashville offers nurse-led wellness sessions that may support comfort, relaxation, and recovery.',
+          'PEMF Nashville does not diagnose back pain, treat injuries or medical conditions, or replace medical evaluation, physical therapy, or chiropractic care.',
+        ],
+      },
+      {
         heading: 'Sessions at home or in Brentwood',
         paragraphs: [
           'In-home sessions ($150 · 60 minutes) let you relax in your own space — many clients with back discomfort prefer not to drive immediately before or after a session. Office sessions at Kinnection Clinic ($125 · 60 minutes) offer a private session room with easy Brentwood access and free parking.',
@@ -164,9 +171,9 @@ export const seoTopics: SeoTopic[] = [
         ],
       },
       {
-        heading: 'Working alongside your existing care',
+        heading: 'PEMF alongside physical therapy or chiropractic care',
         paragraphs: [
-          'People often seek PEMF while recovering from physical strain or while working with their doctor or physical therapist. PEMF is a complement to medical care, never a replacement. If you have an implanted device, active bleeding, or other contraindications, Lisa will discuss those on your consult before booking.',
+          'Some people explore PEMF while already following guidance from a physician, physical therapist, or chiropractor. PEMF Nashville provides wellness sessions only; it does not provide physical therapy or chiropractic care, and it is not a substitute for clinician-directed care. If you have an implanted device, active bleeding, or other contraindications, Lisa will discuss those on your consult before booking.',
         ],
       },
       {

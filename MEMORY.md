@@ -1,10 +1,10 @@
 # PEMF Nashville — Project Memory
 
 > Living document. Update after every session that changes facts, rules, or priorities.  
-> **Last updated:** 2026-08-03  
+> **Last updated:** 2026-09-06
 > **Status:** Production live at [https://www.pemfnashville.com](https://www.pemfnashville.com)
 
-**Read this file first, every session.**
+**Read `AGENTS.md` first, then this file, every session.**
 
 ---
 
@@ -77,11 +77,11 @@ Lisa is a **licensed Registered Nurse**. Site copy in Lisa's marketing voice mus
 | Venmo | @Lisataylor_ |
 | Base area | Bellevue / West Nashville |
 
-### Live pricing (do not use old $125 / $450 / $600 numbers)
+### Live pricing (do not use obsolete $100 office pricing or retired $450 / $600 package prices)
 
 | Option | Price | Notes |
 |--------|-------|-------|
-| Office session | **$100** / 60 min | Kinnection Clinic, Brentwood |
+| Office session | **$125** / 60 min | Kinnection Clinic, Brentwood |
 | In-home session | **$150** / 60 min | Lisa travels with full setup |
 | Four in-home sessions | **$540** | $135 each, paid as package |
 
@@ -89,7 +89,7 @@ Office sessions sold individually only. No 6-pack or monthly retainer on site to
 
 ### Locations
 
-1. **Kinnection Clinic · Brentwood** — office sessions ($100)
+1. **Kinnection Clinic · Brentwood** — office sessions ($125)
 2. **In-home** — Nashville, Belle Meade, Green Hills, Franklin, Brentwood, Bellevue, Kingston Springs, Fairview, Cool Springs, Leipers Fork, and surrounding areas ($150)
 
 ### Brand tagline vs service cards
@@ -103,16 +103,15 @@ Office sessions sold individually only. No 6-pack or monthly retainer on site to
 - Minimum: **$5,000/month**
 - Target: **$10,000+/month**
 
-### Google reviews (point-in-time — recheck before citing)
+### Google reviews (point-in-time — verify before reuse)
 
-- **As of 2026-08-03:** ~9 reviews (handoff estimate; competitors in map pack often have 38–48)
-- Run a fresh check on Google Business Profile before using this number in copy or planning
+- **14 reviews, owner-confirmed as of Sep 6, 2026; verify before reuse.**
 
 ---
 
 ## Production snapshot
 
-> **HEAD moves.** Last verified commit: `43c773d` (2026-08-03).  
+> **HEAD moves.** Last verified commit: `61feb75` (2026-09-06).
 > Before trusting deploy state, run: `git log -1 --oneline` and compare to `origin/main`.
 
 | Item | Status |
@@ -150,9 +149,9 @@ Header → Hero → Where to Find Lisa (`#locations`) → What is PEMF → Servi
 
 Services · About · Testimonials · Pricing · FAQ — **no "Locations" link** to `#locations` yet
 
-### Known crawl gap
+### Current internal-linking structure
 
-Four SEO topic pages have **zero inbound internal links** from homepage, FAQ answers, or footer (verified 2026-08-03). Highest-priority code task after doc sync.
+The four SEO topic pages are reachable through contextual links inside FAQ answers 12–15, implemented in `61feb75`. Footer topic links were intentionally not added under the current SEO decision; contextual FAQ links are the approved internal-linking approach.
 
 ---
 
@@ -192,6 +191,8 @@ Four SEO topic pages have **zero inbound internal links** from homepage, FAQ ans
 | 2026-08 | Gazette: link out, don't republish | Footer external link only; no `/press` page yet |
 | 2026-08 | Lisa back story | `/pemf-for-back-discomfort` only; not other three topic pages |
 | 2026-08 | Lisa voice on recovery/joint/inflammation | Planned from existing site copy — **not done** |
+| 2026-09-06 | Kinnection office pricing | Updated to $125 in source via `897cd5f` |
+| 2026-09-06 | Contextual FAQ links | FAQs 12–15 link to the four topic pages via `61feb75`; footer topic links intentionally not added |
 
 ---
 
@@ -211,16 +212,15 @@ Land pop-ups were promoted through July 2026 per Gazette article. As of Aug 3, t
 
 | Priority | Task | Why |
 |----------|------|-----|
-| **1** | Sync PRD.md + MEMORY.md (this file) | Stale docs teach wrong pricing and phantom TinaCMS |
-| **2** | Remove `public/images/PRD.md` and `MEMORY.md` | Publicly reachable stale copies |
-| **3** | Internal links — FAQ 11–15 + footer → four topic pages | Orphan pages don't get crawled |
-| **4** | Lisa-voice paragraphs on recovery / joint / inflammation | One section each in `lib/seo-topics.ts` |
-| **5** | `/privacy` and `/terms` pages | Footer 404 today |
-| **6** | Header "Locations" → `#locations` | One line in `Header.tsx` |
-| **7** | Sitemap + robots.txt + Search Console | After URLs stable |
-| **8** | Review sprint | Map-pack lever vs competitors |
-| **9** | Retire Canva site | Duplicate web presence |
-| **10** | Compress images (~94 MB in `public/images/`) | Build performance |
+| **1** | Maintain AGENTS / MEMORY / PRD alignment after verified changes | Ongoing documentation discipline |
+| **2** | Remove `public/images/PRD.md` and `MEMORY.md` | Publicly reachable stale copies — separate approval required |
+| **3** | Lisa-voice paragraphs on recovery / joint / inflammation | One section each in `lib/seo-topics.ts` |
+| **4** | `/privacy` and `/terms` pages | Footer 404 today — verify before changing |
+| **5** | Header "Locations" → `#locations` | One line in `Header.tsx` |
+| **6** | Sitemap + robots.txt + Search Console | Verify current configuration before changing |
+| **7** | Review sprint | 14 reviews, owner-confirmed Sep 6, 2026; verify before reuse |
+| **8** | Retire Canva site | Duplicate web presence |
+| **9** | Compress images (~94 MB in `public/images/`) | Build performance |
 
 **Defer:** `/press` page (wait for 3–4 press hits) · AboutLisa bio expansion from Gazette · TinaCMS · GA · JSON-LD · image renames
 
@@ -252,6 +252,9 @@ Lead with the problem the client feels; introduce PEMF as the solution once they
 - **2026-08-03** — Weekend Land popup removed from layout.
 - **2026-08-03** — Gazette footer link + back-discomfort Lisa story deployed (`43c773d`).
 - **2026-08-03** — Doc sync: PRD + MEMORY rewritten to match production.
+- **2026-09-06** — Kinnection office price updated to $125 in source (`897cd5f`).
+- **2026-09-06** — Contextual FAQ links implemented (`61feb75`): FAQ 12 → joint comfort; 13 → recovery; 14 → back discomfort; 15 → inflammation. Footer topic links intentionally not added.
+- **2026-09-06** — Root documentation synchronized with current source and recent Git history; `AGENTS.md` added as agent-operations memory.
 
 ---
 

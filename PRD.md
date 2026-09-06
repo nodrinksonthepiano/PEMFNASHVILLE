@@ -1,6 +1,6 @@
 # PEMF Nashville — Product Requirements Document (PRD)
 
-> **Version 2.0** | Last updated: 2026-08-03 | **Status: Production live**  
+> **Version 2.1** | Last updated: 2026-09-06 | **Status: Production live**
 > Companion doc: [MEMORY.md](./MEMORY.md) — rules, current facts, and edit map.
 
 ---
@@ -19,9 +19,9 @@
 
 **What v1 achieved:** Replaced the Canva site with a Next.js app — mobile-first, SEO-oriented, legally compliant copy, office + in-home booking paths, four SEO topic pages, and 15 FAQs.
 
-**What v1 did not build:** TinaCMS self-editing, Google Analytics, JSON-LD schema, sitemap/robots, privacy/terms pages, internal links to topic pages.
+**What v1 did not build:** TinaCMS self-editing, Google Analytics, JSON-LD schema, sitemap/robots, or privacy/terms pages. Contextual FAQ links to topic pages were added after v1.
 
-> **Deploy state moves.** Last verified commit: `43c773d` (2026-08-03). Run `git log -1 --oneline` before citing current HEAD.
+> **Repository state moves.** Last verified commit: `61feb75` (2026-09-06). A current-branch commit does not prove production deployment; run `git log -1 --oneline` before citing current HEAD and verify the live site when deployment status matters.
 
 ---
 
@@ -41,7 +41,7 @@
 
 | Option | Price | Duration |
 |--------|-------|----------|
-| Office session at Kinnection Clinic, Brentwood | **$100** | 60 min |
+| Office session at Kinnection Clinic, Brentwood | **$125** | 60 min |
 | In-home session | **$150** | 60 min |
 | Four in-home sessions (package) | **$540** | $135 each |
 
@@ -196,7 +196,7 @@ Services · About · Testimonials · Pricing · FAQ
 
 ### 8.3 Where to Find Lisa
 
-- Kinnection Clinic · Brentwood ($100)
+- Kinnection Clinic · Brentwood ($125)
 - In-home sessions ($150)
 - Anchor: `#locations`
 
@@ -226,7 +226,7 @@ Services · About · Testimonials · Pricing · FAQ
 
 ### 8.9 Pricing
 
-- $100 office · $150 in-home · $540 four-pack
+- $125 office · $150 in-home · $540 four-pack
 - Book consult CTA
 
 ### 8.10 FAQ (15 questions)
@@ -247,7 +247,7 @@ Services · About · Testimonials · Pricing · FAQ
 14. What is PEMF used for after an injury?
 15. Does PEMF help with inflammation?
 
-**Gap:** FAQ answers 11–15 do not yet link to the four topic pages.
+**Implemented:** FAQ answers 12–15 include contextual links to the four topic pages (`61feb75`). FAQ 11 has no topic-page link. Footer topic links were intentionally not added under the current SEO decision; contextual FAQ links are the approved internal-linking approach.
 
 ### 8.11 Final CTA
 
@@ -274,10 +274,10 @@ Four intent-matched landing pages for organic search. Copy in `lib/seo-topics.ts
 | `/pemf-for-inflammation` | Inflammation research intent |
 | `/pemf-for-back-discomfort` | Back discomfort + Lisa first-person origin story |
 
-**Gaps:**
+**Current state:**
 
-- Zero inbound internal links from homepage, FAQ, or footer (orphan pages for crawlers)
-- Lisa-voice personal sections planned for recovery, joint, inflammation — **not yet written** (back-discomfort page has one)
+- Contextual links from homepage FAQ answers 12–15 provide a human-visible path to all four topic pages. Footer topic links were intentionally not added under the current SEO decision; contextual FAQ links are the approved internal-linking approach.
+- Lisa-voice personal sections planned for recovery, joint, inflammation are **not yet written**; back-discomfort has one.
 
 ---
 
@@ -289,11 +289,12 @@ Four intent-matched landing pages for organic search. Copy in `lib/seo-topics.ts
 - Keywords array including Brentwood, recovery, joint comfort
 - Four topic pages with unique `generateMetadata()` per route
 - 15 FAQs including intent-matched questions 11–15
+- Contextual FAQ links: 12 → joint comfort; 13 → recovery; 14 → back discomfort; 15 → inflammation
+- Footer topic links intentionally not added under the current SEO decision; contextual FAQ links are the approved internal-linking approach
 - Compliant symptom-first language in services and topic copy
 
 ### Not done (backlog)
 
-- Internal links from FAQ 11–15 and footer to topic pages
 - `robots.txt` and XML sitemap
 - Google Search Console submission
 - Local business JSON-LD schema
@@ -317,16 +318,15 @@ Four intent-matched landing pages for organic search. Copy in `lib/seo-topics.ts
 
 | Priority | Task | Status |
 |----------|------|--------|
-| 1 | Sync PRD + MEMORY | ✅ This update |
-| 2 | Remove `public/images/PRD.md` and `MEMORY.md` | Pending — publicly reachable stale copies |
-| 3 | Internal links — FAQ 11–15 + footer → topic pages | Pending |
-| 4 | Lisa-voice sections on recovery / joint / inflammation pages | Pending |
-| 5 | `/privacy` and `/terms` pages | Pending — footer 404 |
-| 6 | Header "Locations" → `#locations` | Pending |
-| 7 | Sitemap + robots.txt + Search Console | Pending |
-| 8 | Review sprint (~9 reviews as of Aug 2026; target 15+) | Ongoing |
-| 9 | Retire Canva site | Pending |
-| 10 | Compress images in `public/images/` | Pending |
+| 1 | Maintain AGENTS / MEMORY / PRD alignment after verified changes | Ongoing |
+| 2 | Remove `public/images/PRD.md` and `MEMORY.md` | Pending — separate approval required |
+| 3 | Lisa-voice sections on recovery / joint / inflammation pages | Pending |
+| 4 | `/privacy` and `/terms` pages | Pending — verify live status first |
+| 5 | Header "Locations" → `#locations` | Pending |
+| 6 | Sitemap + robots.txt + Search Console | Pending — verify current configuration first |
+| 7 | Review sprint | Ongoing — see `MEMORY.md` for the current review baseline; verify before reuse |
+| 8 | Retire Canva site | Pending |
+| 9 | Compress images in `public/images/` | Pending |
 
 **Deferred:** `/press` page · AboutLisa bio expansion · TinaCMS · GA · JSON-LD · image renames
 
@@ -365,3 +365,10 @@ See original asset inventory in git history (April 2026 PRD). Key live images:
 - Agent reads, reports, edits approved files only.
 - One task per session when possible.
 - Full compliance rules and edit map: [MEMORY.md](./MEMORY.md).
+
+---
+
+## 16. Recent verified changes
+
+- `897cd5f` — Kinnection office pricing updated from $100 to $125 in source.
+- `61feb75` — Contextual FAQ links implemented in source; no footer topic-link group was added.

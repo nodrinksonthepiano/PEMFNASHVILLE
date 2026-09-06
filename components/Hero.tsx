@@ -15,13 +15,13 @@ export default function Hero() {
             In-Home Sessions + Brentwood Office · Lisa Taylor, RN
           </h2>
 
+          <p className="text-gold/90 text-sm sm:text-base font-medium tracking-wide mb-3 max-w-lg">
+            Nashville · Brentwood · Belle Meade · Green Hills · Franklin · Bellevue
+          </p>
+
           <p className="text-cream/75 text-base sm:text-lg leading-relaxed mb-4 max-w-lg">
             Nurse-led PEMF wellness sessions that may support muscle and joint comfort, workout recovery, and
             relaxation — in-home across Nashville or at Kinnection Clinic in Brentwood.
-          </p>
-
-          <p className="text-gold/90 text-sm sm:text-base font-medium tracking-wide mb-3 max-w-lg">
-            Nashville · Brentwood · Belle Meade · Green Hills · Franklin · Bellevue
           </p>
 
           <p className="font-script text-gold text-xl sm:text-2xl mb-8 max-w-lg">

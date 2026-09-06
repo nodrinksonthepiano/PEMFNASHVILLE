@@ -2,10 +2,12 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
 import { siteConfig } from '@/lib/content'
 
 export default function Header() {
+  const pathname = usePathname()
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -16,11 +18,11 @@ export default function Header() {
   }, [])
 
   const navLinks = [
-    { href: '#services', label: 'Services' },
-    { href: '#about', label: 'About' },
-    { href: '#testimonials', label: 'Testimonials' },
-    { href: '#pricing', label: 'Pricing' },
-    { href: '#faq', label: 'FAQ' },
+    { href: pathname === '/' ? '#services' : '/#services', label: 'Services' },
+    { href: pathname === '/' ? '#about' : '/#about', label: 'About' },
+    { href: pathname === '/' ? '#testimonials' : '/#testimonials', label: 'Testimonials' },
+    { href: pathname === '/' ? '#pricing' : '/#pricing', label: 'Pricing' },
+    { href: pathname === '/' ? '#faq' : '/#faq', label: 'FAQ' },
   ]
 
   return (

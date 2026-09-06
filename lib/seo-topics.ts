@@ -60,10 +60,10 @@ export const seoTopics: SeoTopic[] = [
   },
   {
     slug: 'pemf-for-joint-comfort',
-    title: 'PEMF for Joint Comfort & Stiffness | Nashville & Brentwood',
+    title: 'Joint, Neck & Shoulder Comfort | Nashville PEMF Wellness',
     metaDescription:
       'Information on PEMF wellness sessions for muscle and joint stiffness in Nashville and Brentwood. Wellness service only — Lisa Taylor, RN. Book a free consult.',
-    h1: 'PEMF for Joint Comfort & Stiffness',
+    h1: 'Joint, Neck & Shoulder Comfort in Nashville',
     subtitle: 'Nashville · Brentwood · In-Home & Office Sessions',
     intro:
       'Joint stiffness and general muscle discomfort are among the most common reasons people research PEMF. If you live in Nashville, Brentwood, or the surrounding area and are looking for a non-invasive wellness option, this page explains what PEMF is, what a session involves, and how Lisa Taylor, RN approaches joint-comfort-focused sessions — without overpromising outcomes.',
@@ -80,6 +80,19 @@ export const seoTopics: SeoTopic[] = [
         paragraphs: [
           'Every session is tailored. Lisa places the PEMF applicator on or near areas you identify — neck, shoulders, hips, knees, hands — while you relax fully clothed in a private office room or at home. Sessions last 60 minutes and are designed to be comfortable and restorative.',
           'Some clients notice a difference after one session; others prefer a series for cumulative support. There is no one-size-fits-all answer — your consult is where Lisa helps map a plan that fits your life.',
+        ],
+      },
+      {
+        heading: 'Neck and shoulder discomfort: one upper-body comfort focus',
+        paragraphs: [
+          'Neck and shoulder tightness can occur together after desk work, travel, workouts, physically demanding weeks, or everyday tension. PEMF Nashville offers fully clothed, non-invasive wellness sessions focused on comfort, relaxation, and recovery.',
+          'A session is not treatment for an injury or medical condition.',
+        ],
+      },
+      {
+        heading: 'When people search for joint pain or arthritis pain relief',
+        paragraphs: [
+          'People often use phrases such as “joint pain relief” or “arthritis pain relief” when researching options for stiffness or discomfort. PEMF Nashville does not diagnose or treat arthritis, joint disease, or pain conditions. Medical concerns should remain under the care of an appropriate healthcare professional.',
         ],
       },
       {

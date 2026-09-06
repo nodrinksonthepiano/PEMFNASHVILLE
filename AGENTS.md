@@ -212,7 +212,7 @@ Before relying on this list, run `git log -1 --oneline` and inspect relevant sou
 ## 11. Verify Before Changing
 
 - `MEMORY.md` and `PRD.md` contain August-era facts that may conflict with current source, including $100 office pricing and zero topic-page links.
-- `public/images/MEMORY.md` and `public/images/PRD.md` are stale internal-document copies in the public-assets directory. Do not delete them without separate approval.
+- `public/images/MEMORY.md` and `public/images/PRD.md` were removed on Sep 6, 2026. They were obsolete internal project documents and were not referenced by runtime code.
 - Verify `/privacy` and `/terms` before treating their status as current.
 - Verify sitemap and robots configuration before asserting indexing infrastructure exists.
 - Verify the current Google review count before publishing or comparing it.

@@ -319,14 +319,13 @@ Four intent-matched landing pages for organic search. Copy in `lib/seo-topics.ts
 | Priority | Task | Status |
 |----------|------|--------|
 | 1 | Maintain AGENTS / MEMORY / PRD alignment after verified changes | Ongoing |
-| 2 | Remove `public/images/PRD.md` and `MEMORY.md` | Pending — separate approval required |
-| 3 | Lisa-voice sections on recovery / joint / inflammation pages | Pending |
-| 4 | `/privacy` and `/terms` pages | Pending — verify live status first |
-| 5 | Header "Locations" → `#locations` | Pending |
-| 6 | Sitemap + robots.txt + Search Console | Pending — verify current configuration first |
-| 7 | Review sprint | Ongoing — see `MEMORY.md` for the current review baseline; verify before reuse |
-| 8 | Retire Canva site | Pending |
-| 9 | Compress images in `public/images/` | Pending |
+| 2 | Lisa-voice sections on recovery / joint / inflammation pages | Pending |
+| 3 | `/privacy` and `/terms` pages | Pending — verify live status first |
+| 4 | Header "Locations" → `#locations` | Pending |
+| 5 | Sitemap + robots.txt + Search Console | Pending — verify current configuration first |
+| 6 | Review sprint | Ongoing — see `MEMORY.md` for the current review baseline; verify before reuse |
+| 7 | Retire Canva site | Pending |
+| 8 | Compress images in `public/images/` | Pending |
 
 **Deferred:** `/press` page · AboutLisa bio expansion · TinaCMS · GA · JSON-LD · image renames
 
@@ -339,7 +338,6 @@ Four intent-matched landing pages for organic search. Copy in `lib/seo-topics.ts
 | `components/WeekendLandBanner.tsx` | In repo; not in layout — do not re-enable without Lisa OK |
 | `weekendLandPromo` in `lib/content.ts` | Copy exists; unused |
 | `testimonialGroups` in `lib/content.ts` | Defined; unused |
-| `public/images/PRD.md` and `MEMORY.md` | Stale April 2026 copies; remove from public folder |
 
 ---
 
@@ -372,3 +370,4 @@ See original asset inventory in git history (April 2026 PRD). Key live images:
 
 - `897cd5f` — Kinnection office pricing updated from $100 to $125 in source.
 - `61feb75` — Contextual FAQ links implemented in source; no footer topic-link group was added.
+- `8fcb681` — Obsolete `public/images/MEMORY.md` and `public/images/PRD.md` removed. They were stale internal project documents and had no runtime-code references.

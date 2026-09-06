@@ -138,8 +138,8 @@ Office sessions sold individually only. No 6-pack or monthly retainer on site to
 | `/pemf-for-back-discomfort` | SEO topic page + Lisa origin story |
 | `/privacy` | **404** (footer links here today) |
 | `/terms` | **404** (footer links here today) |
-| `/images/PRD.md` | **200 — unintended public copy of stale doc** |
-| `/images/MEMORY.md` | **200 — unintended public copy of stale doc** |
+
+> **Completed 2026-09-06:** The obsolete internal documents formerly in `public/images/` were removed. Repository search found no runtime-code references. Their former production URL status is historical and not a current live-production assertion.
 
 ### Homepage section order (live)
 
@@ -213,14 +213,13 @@ Land pop-ups were promoted through July 2026 per Gazette article. As of Aug 3, t
 | Priority | Task | Why |
 |----------|------|-----|
 | **1** | Maintain AGENTS / MEMORY / PRD alignment after verified changes | Ongoing documentation discipline |
-| **2** | Remove `public/images/PRD.md` and `MEMORY.md` | Publicly reachable stale copies — separate approval required |
-| **3** | Lisa-voice paragraphs on recovery / joint / inflammation | One section each in `lib/seo-topics.ts` |
-| **4** | `/privacy` and `/terms` pages | Footer 404 today — verify before changing |
-| **5** | Header "Locations" → `#locations` | One line in `Header.tsx` |
-| **6** | Sitemap + robots.txt + Search Console | Verify current configuration before changing |
-| **7** | Review sprint | 14 reviews, owner-confirmed Sep 6, 2026; verify before reuse |
-| **8** | Retire Canva site | Duplicate web presence |
-| **9** | Compress images (~94 MB in `public/images/`) | Build performance |
+| **2** | Lisa-voice paragraphs on recovery / joint / inflammation | One section each in `lib/seo-topics.ts` |
+| **3** | `/privacy` and `/terms` pages | Footer 404 today — verify before changing |
+| **4** | Header "Locations" → `#locations` | One line in `Header.tsx` |
+| **5** | Sitemap + robots.txt + Search Console | Verify current configuration before changing |
+| **6** | Review sprint | 14 reviews, owner-confirmed Sep 6, 2026; verify before reuse |
+| **7** | Retire Canva site | Duplicate web presence |
+| **8** | Compress images (~94 MB in `public/images/`) | Build performance |
 
 **Defer:** `/press` page (wait for 3–4 press hits) · AboutLisa bio expansion from Gazette · TinaCMS · GA · JSON-LD · image renames
 
@@ -255,6 +254,7 @@ Lead with the problem the client feels; introduce PEMF as the solution once they
 - **2026-09-06** — Kinnection office price updated to $125 in source (`897cd5f`).
 - **2026-09-06** — Contextual FAQ links implemented (`61feb75`): FAQ 12 → joint comfort; 13 → recovery; 14 → back discomfort; 15 → inflammation. Footer topic links intentionally not added.
 - **2026-09-06** — Root documentation synchronized with current source and recent Git history; `AGENTS.md` added as agent-operations memory.
+- **2026-09-06** — Removed obsolete `public/images/MEMORY.md` and `public/images/PRD.md` (`8fcb681`). They were stale internal project documents with no runtime-code references.
 
 ---
 

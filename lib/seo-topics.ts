@@ -44,7 +44,7 @@ export const seoTopics: SeoTopic[] = [
       {
         heading: 'Office sessions in Brentwood or in-home convenience',
         paragraphs: [
-          'Office sessions at Kinnection Clinic ($100 · 60 minutes) are easy to reach from I-65 and Franklin Road — ideal if you want a private room between work and training. In-home sessions ($150 · 60 minutes) serve Nashville, Belle Meade, Green Hills, Franklin, Brentwood, and Bellevue — ideal when you want to recover without driving after a hard workout.',
+          'Office sessions at Kinnection Clinic ($125 · 60 minutes) are easy to reach from I-65 and Franklin Road — ideal if you want a private room between work and training. In-home sessions ($150 · 60 minutes) serve Nashville, Belle Meade, Green Hills, Franklin, Brentwood, and Bellevue — ideal when you want to recover without driving after a hard workout.',
           'A four-session in-home package ($540 · $135 each) is available for clients who want a consistent recovery rhythm at home.',
         ],
       },
@@ -84,7 +84,7 @@ export const seoTopics: SeoTopic[] = [
       {
         heading: 'Where to book in Nashville & Brentwood',
         paragraphs: [
-          'Kinnection Clinic in Brentwood offers office sessions ($100 · 60 minutes) with free parking and flexible scheduling. In-home sessions ($150 · 60 minutes) are available throughout Nashville, Belle Meade, Green Hills, Franklin, Brentwood, and Bellevue.',
+          'Kinnection Clinic in Brentwood offers office sessions ($125 · 60 minutes) with free parking and flexible scheduling. In-home sessions ($150 · 60 minutes) are available throughout Nashville, Belle Meade, Green Hills, Franklin, Brentwood, and Bellevue.',
         ],
       },
       {
@@ -158,7 +158,7 @@ export const seoTopics: SeoTopic[] = [
       {
         heading: 'Sessions at home or in Brentwood',
         paragraphs: [
-          'In-home sessions ($150 · 60 minutes) let you relax in your own space — many clients with back discomfort prefer not to drive immediately before or after a session. Office sessions at Kinnection Clinic ($100 · 60 minutes) offer a private session room with easy Brentwood access and free parking.',
+          'In-home sessions ($150 · 60 minutes) let you relax in your own space — many clients with back discomfort prefer not to drive immediately before or after a session. Office sessions at Kinnection Clinic ($125 · 60 minutes) offer a private session room with easy Brentwood access and free parking.',
           'Lisa brings clinical experience as a Registered Nurse and certified Pulse PEMF practitioner to every session, whether at your home or the office.',
         ],
       },

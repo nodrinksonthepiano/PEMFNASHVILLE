@@ -58,7 +58,7 @@ export default function TopicPage({ topic }: { topic: SeoTopic }) {
                   {schedulingLinks.bookConsult}
                 </a>
                 {' · '}
-                Office $100 · In-home $150 · Nashville &amp; Brentwood
+                Office $125 · In-home $150 · Nashville &amp; Brentwood
               </p>
             </div>
           </div>

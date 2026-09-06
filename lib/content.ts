@@ -33,7 +33,7 @@ export const sessionLocations = [
     id: 'office',
     title: 'Kinnection Clinic · Brentwood',
     headline: 'A private session room in Brentwood',
-    price: '$100',
+    price: '$125',
     duration: '60 minutes',
     description:
       'Easy to reach from I-65 and Franklin Road, with free parking on site. Book mornings, lunch breaks, or early evenings — whatever fits your week.',
@@ -199,13 +199,13 @@ export const faqs = [
     id: 9,
     question: 'Do you have an office location?',
     answer:
-      'Yes — Lisa sees clients at Kinnection Clinic in Brentwood, in addition to offering in-home sessions throughout the Nashville area. Office sessions are $100 for 60 minutes.',
+      'Yes — Lisa sees clients at Kinnection Clinic in Brentwood, in addition to offering in-home sessions throughout the Nashville area. Office sessions are $125 for 60 minutes.',
   },
   {
     id: 10,
     question: 'What\'s the difference between an office session and an in-home session?',
     answer:
-      'Both are full 60-minute sessions with the same equipment and the same care. In-home sessions are $150 and include Lisa traveling to you with everything needed, so you never have to leave home. Office sessions are $100 at Kinnection Clinic in Brentwood.',
+      'Both are full 60-minute sessions with the same equipment and the same care. In-home sessions are $150 and include Lisa traveling to you with everything needed, so you never have to leave home. Office sessions are $125 at Kinnection Clinic in Brentwood.',
   },
   {
     id: 11,
@@ -255,7 +255,7 @@ export const pricing: PricingTier[] = [
   {
     id: 'office',
     label: 'Office Session at Kinnection Clinic',
-    price: '$100',
+    price: '$125',
     sessions: '60 minutes',
     perSession: 'Kinnection Clinic · Brentwood',
     highlight: false,

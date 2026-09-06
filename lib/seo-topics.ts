@@ -19,18 +19,19 @@ const disclaimer =
 export const seoTopics: SeoTopic[] = [
   {
     slug: 'pemf-for-recovery',
-    title: 'PEMF for Workout & Athletic Recovery | Nashville & Brentwood',
+    title: 'Workout & Sports Recovery in Nashville & Brentwood | PEMF',
     metaDescription:
       'Learn how PEMF wellness sessions may support workout and athletic recovery in Nashville and Brentwood. Lisa Taylor, RN — in-home visits and Kinnection Clinic office sessions.',
-    h1: 'PEMF for Workout & Athletic Recovery',
+    h1: 'Workout & Sports Recovery in Nashville',
     subtitle: 'Nashville · Brentwood · In-Home & Office Sessions',
     intro:
       'Whether you train hard, compete on weekends, or simply push your body more than you used to, recovery is where progress actually happens. Many active people in Nashville and Brentwood explore PEMF as part of a recovery routine — not as a replacement for medical care or coaching, but as a calming wellness session that fits around a busy training schedule.',
     sections: [
       {
-        heading: 'Why athletes and active people look into PEMF',
+        heading: 'Workout recovery, sports recovery, and muscle soreness',
         paragraphs: [
           'After training, competition, or a physically demanding week, many people describe feeling tight, depleted, or simply not quite bounced back. PEMF — Pulsed Electromagnetic Field — is a non-invasive wellness experience that uses gentle, rhythmic electromagnetic fields during a restorative session. It has been used by wellness practitioners, professional athletes, and equestrians for decades.',
+          'Active people may look for a restorative wellness session after training, competition, workouts, or physically demanding weeks — especially when they feel sore, tight, depleted, or ready for recovery and rest.',
           'Clients often book around their training calendar — after a long run, between competition weekends, or during a heavy training block when they want extra support for how their body feels day to day.',
         ],
       },

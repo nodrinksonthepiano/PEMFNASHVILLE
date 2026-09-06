@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-plum">
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 grid md:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
         {/* Text content — centered on mobile, left-aligned md+ */}
-        <div className="order-2 md:order-1 flex min-w-0 w-full flex-col items-center md:items-start text-center md:text-left">
+        <div className="order-1 md:order-1 flex min-w-0 w-full flex-col items-center md:items-start text-center md:text-left">
           <h1 className="font-serif text-cream font-bold leading-tight mb-4 text-[clamp(2.25rem,1.2rem+4vw,4rem)]">
             PEMF Nashville
           </h1>
@@ -14,6 +14,11 @@ export default function Hero() {
           <h2 className="font-serif text-cream/90 text-xl sm:text-2xl font-normal leading-snug mb-4 max-w-lg">
             In-Home Sessions + Brentwood Office · Lisa Taylor, RN
           </h2>
+
+          <p className="text-cream/75 text-base sm:text-lg leading-relaxed mb-4 max-w-lg">
+            Nurse-led PEMF wellness sessions that may support muscle and joint comfort, workout recovery, and
+            relaxation — in-home across Nashville or at Kinnection Clinic in Brentwood.
+          </p>
 
           <p className="text-gold/90 text-sm sm:text-base font-medium tracking-wide mb-3 max-w-lg">
             Nashville · Brentwood · Belle Meade · Green Hills · Franklin · Bellevue
@@ -53,7 +58,7 @@ export default function Hero() {
         </div>
 
         {/* Photo */}
-        <div className="order-1 md:order-2 flex justify-center md:justify-end">
+        <div className="order-2 md:order-2 flex justify-center md:justify-end">
           <div className="relative">
             {/* Glow ring */}
             <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-gold/30 via-mauve/20 to-transparent blur-xl" />

@@ -146,7 +146,17 @@ export const services = [
   },
 ]
 
-export const faqs = [
+export type Faq = {
+  id: number
+  question: string
+  answer: string
+  relatedLink?: {
+    href: string
+    label: string
+  }
+}
+
+export const faqs: Faq[] = [
   {
     id: 1,
     question: 'What is PEMF and how does it work?',
@@ -218,24 +228,40 @@ export const faqs = [
     question: 'Can PEMF help with arthritis or joint stiffness?',
     answer:
       'Many people living with joint stiffness or arthritis seek out PEMF as part of their wellness routine. PEMF is a wellness service, not a medical treatment, and it isn\'t intended to diagnose or treat any condition. Lisa is happy to discuss whether a session makes sense for you.',
+    relatedLink: {
+      href: '/pemf-for-joint-comfort',
+      label: 'Learn more about PEMF for joint comfort',
+    },
   },
   {
     id: 13,
     question: 'Is PEMF used for workout recovery?',
     answer:
       'Many athletes and active people use PEMF as part of a recovery routine after training, competition, or physical strain. Many clients book sessions specifically around their training schedule.',
+    relatedLink: {
+      href: '/pemf-for-recovery',
+      label: 'Learn more about PEMF for workout recovery',
+    },
   },
   {
     id: 14,
     question: 'What is PEMF used for after an injury?',
     answer:
       'People often seek PEMF while recovering from physical strain or while working with their doctor or physical therapist. PEMF is a complement to medical care, never a replacement.',
+    relatedLink: {
+      href: '/pemf-for-back-discomfort',
+      label: 'Learn more about PEMF for back discomfort',
+    },
   },
   {
     id: 15,
     question: 'Does PEMF help with inflammation?',
     answer:
       'Inflammation is one of the most common reasons people research PEMF. Research in this area is ongoing. PEMF Nashville offers wellness sessions and does not make medical claims — Lisa will answer your questions honestly on a free consult.',
+    relatedLink: {
+      href: '/pemf-for-inflammation',
+      label: 'Read our approach to PEMF and inflammation questions',
+    },
   },
 ]
 

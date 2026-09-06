@@ -1,9 +1,18 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { faqs } from '@/lib/content'
 
-function FAQItem({ question, answer }: { question: string; answer: string }) {
+function FAQItem({
+  question,
+  answer,
+  relatedLink,
+}: {
+  question: string
+  answer: string
+  relatedLink?: { href: string; label: string }
+}) {
   const [open, setOpen] = useState(false)
 
   return (
@@ -31,6 +40,14 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
         }`}
       >
         <p className="text-plum/65 leading-relaxed">{answer}</p>
+        {relatedLink && (
+          <Link
+            href={relatedLink.href}
+            className="inline-block mt-3 text-sm font-semibold text-mauve-dark hover:text-plum underline decoration-gold/60 underline-offset-4 transition-colors"
+          >
+            {relatedLink.label} →
+          </Link>
+        )}
       </div>
     </div>
   )
@@ -72,7 +89,7 @@ export default function FAQ() {
           {/* Right — accordion */}
           <div className="bg-cream-dark/50 rounded-3xl p-6 sm:p-8 border border-mauve/10">
             {faqs.map((faq) => (
-              <FAQItem key={faq.id} question={faq.question} answer={faq.answer} />
+              <FAQItem key={faq.id} {...faq} />
             ))}
           </div>
         </div>

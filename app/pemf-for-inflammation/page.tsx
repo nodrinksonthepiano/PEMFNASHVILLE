@@ -6,7 +6,13 @@ const slug = 'pemf-for-inflammation'
 
 export function generateMetadata(): Metadata {
   const topic = getSeoTopic(slug)!
-  return { title: topic.title, description: topic.metaDescription }
+  return {
+    title: topic.title,
+    description: topic.metaDescription,
+    alternates: {
+      canonical: '/pemf-for-inflammation',
+    },
+  }
 }
 
 export default function PemfForInflammationPage() {

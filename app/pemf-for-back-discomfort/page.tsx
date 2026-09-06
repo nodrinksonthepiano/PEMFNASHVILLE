@@ -6,7 +6,13 @@ const slug = 'pemf-for-back-discomfort'
 
 export function generateMetadata(): Metadata {
   const topic = getSeoTopic(slug)!
-  return { title: topic.title, description: topic.metaDescription }
+  return {
+    title: topic.title,
+    description: topic.metaDescription,
+    alternates: {
+      canonical: '/pemf-for-back-discomfort',
+    },
+  }
 }
 
 export default function PemfForBackDiscomfortPage() {

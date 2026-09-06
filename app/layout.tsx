@@ -21,6 +21,10 @@ const dancing = Dancing_Script({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.pemfnashville.com'),
+  alternates: {
+    canonical: '/',
+  },
   title: 'PEMF Nashville | In-Home Sessions + Brentwood Office | Lisa Taylor, RN',
   description:
     'PEMF sessions with Lisa Taylor, RN — for muscle and joint comfort, recovery, and relaxation. In-home visits across Nashville, Brentwood, Belle Meade, and Franklin, plus office sessions at Kinnection Clinic in Brentwood. Book a free consult.',

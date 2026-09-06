@@ -101,7 +101,7 @@ export default function WhatIsPEMF() {
             alt="PEMF energy visualization"
             fill
             className="object-cover opacity-60"
-            sizes="100vw"
+            sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1199px) calc(100vw - 48px), 1152px"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-plum/80 via-plum/40 to-plum/80 flex items-center justify-center">
             <p className="font-script text-3xl sm:text-4xl text-cream text-center px-4">

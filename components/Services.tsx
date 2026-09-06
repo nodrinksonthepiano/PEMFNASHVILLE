@@ -31,7 +31,7 @@ export default function Services() {
                   alt={service.imageAlt}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 767px) calc(100vw - 48px), (max-width: 1023px) calc((100vw - 96px) / 3), (max-width: 1199px) calc((100vw - 112px) / 3), 363px"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-plum/80 to-transparent" />
 

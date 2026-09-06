@@ -42,7 +42,7 @@ export default function Animals() {
                 alt="Lisa Taylor administering a PEMF session to a golden retriever"
                 fill
                 className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 415px) calc(100vw - 32px), 384px"
               />
             </div>
           </div>
@@ -79,7 +79,7 @@ export default function Animals() {
                 alt={photo.alt}
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
-                sizes="(max-width: 768px) 33vw, 25vw"
+                sizes="(max-width: 639px) calc((100vw - 56px) / 3), (max-width: 1199px) calc((100vw - 80px) / 3), 374px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-plum/70 via-transparent to-transparent
                               opacity-0 group-hover:opacity-100 transition-opacity duration-300

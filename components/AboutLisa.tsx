@@ -26,7 +26,7 @@ export default function AboutLisa() {
                   width={2677}
                   height={1784}
                   className="h-auto w-full"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  sizes="(max-width: 607px) calc(100vw - 32px), (max-width: 1023px) 576px, (max-width: 1199px) calc((100vw - 128px) / 2), 536px"
                 />
               </div>
 
